@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>TPS商城-正品低价、品质保证、享受优惠，轻松购物!</title>
+		<link rel="stylesheet" type="text/css" href="../css/reset.css"/>
+		<script src="../js/jquery-1.11.1.min.js" type="text/javascript" charset="utf-8"></script>
+	</head>
+	<style type="text/css">
+		#main{
+			width: 100%;
+			min-width: 1200px;
+			height: 600px;
+			background: url(../images/reg_bg.gif) center no-repeat;
+		}
+		#main .w1200{
+			position: relative;
+		}
+		#main .register{
+		    position: absolute;
+		    top: 50px;
+		    right: 0;
+		    -webkit-box-sizing: border-box;
+		    -moz-box-sizing: border-box;
+		    box-sizing: border-box;
+		    padding: 31px 35px;
+		    width: 380px;
+		    background: #fff
+		}
+		#main .register .nav{
+			width: 314px;
+		    height: 45px;
+		    color: #999;
+		    text-align: center;
+		    font-weight: 700;
+		    font-size: 18px;
+		    line-height: 45px;
+		    margin-bottom: 25px;
+		}
+		#main .register .nav li{
+			float: left;
+		    box-sizing: border-box;
+		    margin-right: 25px;
+		}
+		#main .register .nav li.active{
+		    border-bottom: 2px solid #ed4242;
+		    color: #ed4242;
+		}
+		#main .register .nav li a{
+			color: #999;
+		}
+		#main .register .reg{
+			width: 314px;
+			height: 252px;
+		}
+		#main .register .reg li{
+			position: relative;
+		}
+		#main .register .reg li.protocol{
+			margin-bottom: 8px;
+		}
+		#main .register .reg li>i{
+			position: absolute;
+		    font-size: 20px;
+		    top: 8px;
+		    left: 6px;
+		}
+		#main .register .reg li>input{
+		    -webkit-box-sizing: border-box;
+		    -moz-box-sizing: border-box;
+		    box-sizing: border-box;
+		    padding-left: 30px;
+		    width: 300px;
+		    height: 40px;
+		    outline: 0;
+		    border: 1px solid #e5e5e5;
+		    border-radius: 6px;
+		    color: #999;
+		    font-size: 14px;
+		    margin-bottom: 10px;
+		}
+		#main .register .reg li>input#check{
+	        margin: 0 5px 2px 0;
+		    width: 16px;
+		    height: 16px;
+		    vertical-align: middle;
+		}
+		#main .register .reg .btn{
+		    display: block;
+		    width: 314px;
+		    height: 45px;
+		    border: 0;
+		    border-radius: 6px;
+		    background: #ed4242;
+		    color: #fff;
+		    text-align: center;
+		    font-size: 18px;
+		    line-height: 45px;
+		    cursor: pointer;
+		}
+		#main .register p{
+			padding: 4px 0 4px 10px;
+			margin-top: 10px;
+		}
+		#main .register .reg a{
+		    color: #3388ff;
+		}
+		#main .register .reg a:hover{
+			text-decoration: underline;
+		}
+	</style>
+	<body>
+		<div id="headWrap"></div>
+		
+		<div id="main">
+			<div class="w1200">
+				<div class="register">
+					<ul class="nav">
+						<li class="active"><a href="javascript:;">邮箱注册</a></li>
+						<li><a href="javascript:;">手机号码注册</a></li>
+					</ul>
+					<form action="post">
+						<ul class="reg">
+							<li>
+								<input id="email" type="text" placeholder="电子邮箱" />
+								<span></span>
+							</li>
+							<li>
+								<input id="pwd" type="text" placeholder="请输入密码" />
+								<span></span>
+							</li>
+							<li>
+								<input id="rpwd" type="text" placeholder="请再次输入密码" />
+								<span></span>
+							</li>
+							<li class="protocol">
+								<input type="checkbox" id="check" checked/>
+								我同意
+								<a href="javascript:;">《TPS用户注册协议》</a>
+							</li>
+							<input class="btn" type="button" value="同意协议并注册"/>
+							<p>
+								已有账号?
+								<a href="login.html">去登录</a>
+							</p>
+						</ul>
+					</form>
+				</div>
+			</div>
+		</div>
+		
+		<div id="footWrap"></div>
+	</body>
+</html>
+<script type="text/javascript">
+	//加载头部信息
+	$("#headWrap").load("header.html");
+	//加载底部信息
+	$("#footWrap").load("footer.html");
+</script>

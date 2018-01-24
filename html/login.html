@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>TPS商城-正品低价、品质保证、享受优惠，轻松购物!</title>
+		<link rel="stylesheet" type="text/css" href="../css/reset.css"/>
+		<link rel="stylesheet" type="text/css" href="../loginIcon/iconfont.css"/>
+		<script src="../js/jquery-1.11.1.min.js" type="text/javascript" charset="utf-8"></script>
+	</head>
+	<style type="text/css">
+		#main{
+			width: 100%;
+			min-width: 1200px;
+			height: 600px;
+			background: url(../images/reg_bg.gif) center no-repeat;
+		}
+		#main .w1200{
+			position: relative;
+			
+		}
+		#main .login{
+		    position: absolute;
+		    top: 50px;
+		    right: 0;
+		    -webkit-box-sizing: border-box;
+		    -moz-box-sizing: border-box;
+		    box-sizing: border-box;
+		    padding: 31px 35px;
+		    width: 380px;
+		    background: #fff
+		}
+		#main .login h3{
+			width: 314px;
+		    height: 45px;
+		    color: #999;
+		    text-align: center;
+		    font-weight: 700;
+		    font-size: 18px;
+		    line-height: 45px;
+		}
+		#main .login ul{
+			width: 314px;
+			height: 233px;
+			margin-top: 25px;
+		}
+		#main .login ul li{
+			position: relative;
+		}
+		#main .login ul li>i{
+			position: absolute;
+		    font-size: 20px;
+		    top: 8px;
+		    left: 6px;
+		}
+		#main .login ul li>input{
+		    -webkit-box-sizing: border-box;
+		    -moz-box-sizing: border-box;
+		    box-sizing: border-box;
+		    padding-left: 30px;
+		    width: 300px;
+		    height: 40px;
+		    outline: 0;
+		    border: 1px solid #e5e5e5;
+		    border-radius: 6px;
+		    color: #999;
+		    font-size: 14px;
+		    margin-bottom: 12px;
+		}
+		#main .login ul li>input.check{
+		    width: 142px;
+		    float: left;
+		    margin-right: 16px;
+		}
+		#main .login ul li>span{
+			float: left;
+			width: 138px;
+			height: 38px;
+			border: solid 1px #C0C0C0;
+			background: url(../images/output_captcha.png);
+		}
+		#main .login ul .btn{
+		    display: block;
+		    width: 314px;
+		    height: 45px;
+		    border: 0;
+		    border-radius: 6px;
+		    background: #ed4242;
+		    color: #fff;
+		    text-align: center;
+		    font-size: 18px;
+		    line-height: 45px;
+		    cursor: pointer;
+		    margin: 12px 0;
+		}
+		#main .login p a{
+		    color: #3388ff;
+		}
+		#main .login p a:hover{
+			text-decoration: underline;
+		}
+	</style>
+	<body>
+		<div id="headWrap"></div>
+		
+		<div id="main">
+			<div class="w1200">
+				<div class="login">
+					<h3>账号登录</h3>
+					<ul>
+						<li>
+							<input type="text" placeholder="邮箱/ID/手机号" />
+							<i class="iconfont icon-gerenzhongxin1"></i>
+						</li>
+						<li>
+							<input type="text" placeholder="密码" />
+							<i class="iconfont icon-iconset0114"></i>
+						</li>
+						<li>
+							<input class="check" type="text" placeholder="验证码" />
+							<span></span>
+						</li>
+						<input class="btn" type="button" value="登录"/>
+						<p>
+							不是会员?
+							<a href="register.html">马上注册</a>
+							<a class="fr" href="javascript:;">忘记密码</a>
+						</p>
+					</ul>
+				</div>
+			</div>
+		</div>
+		
+		<div id="footWrap"></div>
+	</body>
+</html>
+<script type="text/javascript">
+	//加载头部信息
+	$("#headWrap").load("header.html");
+	//加载底部信息
+	$("#footWrap").load("footer.html");
+</script>

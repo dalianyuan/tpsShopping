@@ -1,0 +1,79 @@
+#footer{
+	color: #999;
+	height: 216px;
+    background: #eee;
+    border-top: 1px solid #ddd;
+    min-width: 1200px;
+}
+
+/*footer左侧left*/
+#footer .left ul{
+	width: 574px;
+	height: 216px;
+}
+#footer .left ul a:hover{
+	color: #ed4242;
+}
+#footer .left ul li{
+	padding-top: 15px;
+}
+#footer .left ul li.top{
+	height: 21px;
+}
+#footer .left ul li.top a{
+	display: inline-block;
+	width: 52px;
+	height: 21px;
+	line-height: 21px;
+	margin-right: 20px;
+}
+#footer .left ul li.middle{
+	height: 51px;
+}
+#footer .left ul li.bottom{
+	height: 99px;
+}
+#footer .left ul li.bottom>p{
+	height: 21px;
+	line-height: 21px;
+}
+
+#footer .left ul>li i.beian{
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    margin-right: 5px;
+    vertical-align: top;
+    background: url(../images/ico_beian.png) center no-repeat;
+}
+
+/*footer中间center*/
+#footer .center{
+	width: 294px;
+	height: 116px;
+	padding-left: 60px;
+}
+#footer .center p{
+	padding-top: 15px;
+	height: 21px;
+	line-height: 21px;
+}
+#footer .center .tel{
+	margin-top: 16px;
+}
+
+/*footer右侧right*/
+#footer .right{
+	position: relative;
+	height: 124px;
+    width: 160px;
+    text-align: center;
+    color: #eee;
+    background: #e65050;
+    padding: 30px 0 22px;
+}
+#footer .right img{
+	width: 114px;
+	height: 114px;
+	margin-bottom: 10px;
+}
