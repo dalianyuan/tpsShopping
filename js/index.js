@@ -11,14 +11,14 @@ window.onload = function(){
 		
 		/*banner轮播图开始*/
 		var index = 0;//控制数字下标
-		var timer = setInterval( autoPlay, 2500 );
+		var timer = setInterval( autoPlay, 3000 );
 		function autoPlay(){
 			index++;
 			if( index == $( "#picUl>.pic" ).length ){
 				index = 0;
 			}
 			$( "#picUl>.pic" ).eq( index ).css( "background", "url(../images/banner"+index+".jpg)" + "center" );
-			$( "#picUl>.pic" ).eq( index ).fadeIn( 2500 ).siblings().fadeOut( 2500 );
+			$( "#picUl>.pic" ).eq( index ).fadeIn( 2000 ).siblings().fadeOut( 2000 );
 			$( "#banner-nav-list>li" ).eq( index ).addClass( "active" ).siblings().removeClass( "active" );
 		}
 		/*鼠标移入banner 停止定时器 让数字和左右箭头显示*/
@@ -28,7 +28,7 @@ window.onload = function(){
 			$( "#arr>div" ).fadeIn( 900 );
 		} )
 		$( "#banner" ).mouseleave( function(){
-			timer = setInterval( autoPlay, 2500 );
+			timer = setInterval( autoPlay, 3000 );
 			$( "#banner-nav-list" ).fadeOut( 900 );
 			$( "#arr>div" ).fadeOut( 900 );
 		} )
@@ -36,7 +36,7 @@ window.onload = function(){
 		$( "#banner-nav-list>li" ).mouseenter( function(){
 			index = $( this ).index();
 			$( "#picUl>.pic" ).eq( index ).css( "background", "url(../images/banner"+index+".jpg)" + "center" );
-			$( "#picUl>.pic" ).eq( index ).fadeIn( 2500 ).siblings().fadeOut( 2500 );
+			$( "#picUl>.pic" ).eq( index ).fadeIn( 2000 ).siblings().fadeOut( 2000 );
 			$( "#banner-nav-list>li" ).eq( index ).addClass( "active" ).siblings().removeClass( "active" );
 		} )
 		/*点击左右箭头*/
@@ -46,7 +46,7 @@ window.onload = function(){
 				index = $( "#picUl>.pic" ).length - 1;
 			}
 			$( "#picUl>.pic" ).eq( index ).css( "background", "url(../images/banner"+index+".jpg)" + "center" );
-			$( "#picUl>.pic" ).eq( index ).fadeIn( 2500 ).siblings().fadeOut( 2500 );
+			$( "#picUl>.pic" ).eq( index ).fadeIn( 2000 ).siblings().fadeOut( 2000 );
 			$( "#banner-nav-list>li" ).eq( index ).addClass( "active" ).siblings().removeClass( "active" );
 		} )
 		$( "#toRight" ).click( function(){
@@ -55,7 +55,7 @@ window.onload = function(){
 				index = 0;
 			}
 			$( "#picUl>.pic" ).eq( index ).css( "background", "url(../images/banner"+index+".jpg)" + "center" );
-			$( "#picUl>.pic" ).eq( index ).fadeIn( 2500 ).siblings().fadeOut( 2500 );
+			$( "#picUl>.pic" ).eq( index ).fadeIn( 2000 ).siblings().fadeOut( 2000 );
 			$( "#banner-nav-list>li" ).eq( index ).addClass( "active" ).siblings().removeClass( "active" );
 		} )
 		/*banner轮播图结束*/
