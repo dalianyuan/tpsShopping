@@ -195,6 +195,10 @@
     border: 1px solid #ed4242;
     color: #fff;
 }
+#main .good .info .shop-cart>a#cart>i{
+	font-size: 18px;
+	margin-right: 6px;
+}
 /*商品信息结束*/
 
 
@@ -241,6 +245,11 @@
 }
 #main .proMsg .leftList li>a:hover{
 	color: #ed4242;
+}
+
+/*中间图片*/
+#main .proMsg .centerPic .proGrade{
+	display: none;
 }
 
 /*右侧热销推荐开始*/
@@ -291,4 +300,36 @@
 }
 /*右侧热销推荐结束*/
 
+/*回到顶部开始*/
+#toTop{
+	position: fixed;
+	display: none;
+	bottom: 28px;
+	right: 42px;
+	width: 45px;
+	height: 45px;
+	background: url( ../images/toTop1.png );
+}
+#toTop:hover{
+	background: url( ../images/toTop2.png );
+}
+/*回到顶部结束*/
 
+/*在线客服开始*/
+#onLine{
+    width: 108px;
+    min-height: 52px;
+    box-sizing: border-box;
+    border-radius: 6px;
+    position: fixed;
+    top: 40%;
+    right: 2px;
+    cursor: pointer;
+    background: url( ../images/onLine1.png ) no-repeat;
+    background-size: contain;
+}
+#onLine:hover{
+	background: url( ../images/onLine.png ) no-repeat;
+	background-size: contain;
+}
+/*在线客服结束*/

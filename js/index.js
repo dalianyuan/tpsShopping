@@ -67,20 +67,21 @@ window.onload = function(){
 			var str = "";
 			var arr = JSON.parse( res );
 			for( var i = 0; i < 15; i++ ){
+				var randNew = getRand(0,29);
 				str += `<li class="fl">
-							<a href="javascript:;">
+							<a href="proDetail.html?id=${arr[randNew].id}">
 								<p>
 									<i class="iconfont icon-icon--"></i>
 									<i class="iconfont icon-xiaohuoche"></i>
 								</p>
 								<div class="img-box">
-									<img src="../images/${arr[getRand(0,29)].src}"/>
+									<img src="../images/${arr[randNew].src}"/>
 								</div>
 								<div class="detail">
-									<h3>${arr[getRand(0,29)].info}</h3>
-									<p class="price">¥${arr[getRand(0,29)].price}</p>
-									<p>${arr[getRand(0,29)].country}
-										<img src="../images/${arr[getRand(0,29)].icon}"/>
+									<h3>${arr[randNew].info}</h3>
+									<p class="price">¥${arr[randNew].price}</p>
+									<p>${arr[randNew].country}
+										<img src="../images/${arr[randNew].icon}"/>
 									</p>
 								</div>
 							</a>
@@ -91,20 +92,21 @@ window.onload = function(){
 			/*main热卖推荐开始*/
 			var hotStr = "";
 			for( var j = 0; j < 12; j++ ){
+				var randHot = getRand(0,29);
 				hotStr += `<li class="fl">
-								<a href="javascript:;">
+								<a href="proDetail.html?id=${arr[randNew].id}">
 									<p class="fl">
 										<i class="iconfont icon-icon-test"></i>
 										<i class="iconfont icon-xiaohuoche"></i>
 									</p>
 									<div class="img-box">
-										<img src="../images/${arr[getRand(0,29)].src}"/>
+										<img src="../images/${arr[randHot].src}"/>
 									</div>
 									<div class="fl detail">
-										<h3>${arr[getRand(0,29)].info}</h3>
-										<p class="price">¥${arr[getRand(0,29)].price}</p>
-										<p>${arr[getRand(0,29)].country}
-											<img src="../images/${arr[getRand(0,29)].icon}"/>
+										<h3>${arr[randHot].info}</h3>
+										<p class="price">¥${arr[randHot].price}</p>
+										<p>${arr[randHot].country}
+											<img src="../images/${arr[randHot].icon}"/>
 										</p>
 									</div>
 								</a>
@@ -233,8 +235,18 @@ window.onload = function(){
 		
 		/*楼梯*/
 		function showLouti(){
-			/*滚动鼠标  第一楼出现时  侧边楼梯显示*/
+			var flag = true;
 			$( document ).scroll( function(){
+				/*显示浮动的搜索栏*/
+				if( $( "html,body" ).scrollTop() > $( ".newPro" ).offset().top ){
+					$( ".searchFloat" ).fadeIn();
+				}else{
+					$( ".searchFloat" ).fadeOut();
+				}
+				if( !flag ){
+					return;
+				}
+				/*滚动鼠标  第一楼出现时  侧边楼梯显示*/
 				if( $( "html,body" ).scrollTop()+$( window ).innerHeight() >= $( ".floor>.title" ).eq( 0 ).offset().top ){
 					$( "#floatNav" ).fadeIn();
 				}else{
@@ -245,29 +257,41 @@ window.onload = function(){
 				var i = $( ".floor" ).filter( function(){
 					return Math.abs($(this).offset().top-$("html,body").scrollTop())<$(this).height()/2;  
 				} ).index();//返回3-12   ??????????
-				console.log( $( ".floor" ).eq( $( ".floor" ).length - 1 ).index() );//12
+//				console.log( $( ".floor" ).eq( $( ".floor" ).length - 1 ).index() );//12
 				if( i != -1 ){
-					console.log( i-3 );
 					$( "#floatNav>p" ).eq( i-3 ).addClass( "cur" )
 												.siblings()
 												.removeClass( "cur" )
 				}else{
 					$( "#floatNav>p" ).removeClass( "cur" );
 				}
-				
-				
 			} )
 				
 			/*点击回到顶部*/
 			$( "#toTop" ).click( function(){
+				flag = false;
 				$( "html,body" ).animate( { "scrollTop" : 0 }, function(){
-//						flag = true;
+					flag = true;
+				} );
+			} )
+			
+			/*点击每个侧边楼层小图标 可视区显示对应楼层*/
+			$( "#floatNav>p" ).click( function(){
+				flag = false;
+				var index = $( this ).index();
+				$( "html,body" ).animate( { "scrollTop" : $( ".floor" ).eq( index ).offset().top },function(){
+					flag = true;
 				} );
 			} )
 			
 		}
 		showLouti();
 		
+		
+		/*点击closeBtn关闭浮动的app*/
+		$( "#closeBtn" ).click( function(){
+			$( "#appFloat" ).fadeOut();
+		} )
 		
 	} )
 }

@@ -3,6 +3,7 @@
 	<head>
 		<meta charset="UTF-8">
 		<title>商品详情</title>
+		<link rel="shortcut icon" href="https://www.tps138.com/favicon.ico?v=6.6">
 		<link rel="stylesheet" type="text/css" href="../css/reset.css"/>
 		<link rel="stylesheet" type="text/css" href="../css/public.css"/>
 		<link rel="stylesheet" type="text/css" href="../css/header.css"/>
@@ -74,7 +75,7 @@
 									立即购买
 								</a>
 								<a href="shopCar.html" id="cart">
-									<i></i>
+									<i class="iconfont icon-daohanggouwuche"></i>
 									加入购物车
 								</a>
 								<a href="javascript:;" id="care">
@@ -86,7 +87,6 @@
 						</div>
 					</div>
 				</div>
-				
 				<div class="proMsg">
 					<h3>
 						<span class="on">商品介绍</span>
@@ -246,7 +246,7 @@
 							<li><img src="../images/inform10.jpg"/></li>
 						</ul>
 						<ul class="proGrade">
-							
+							<img src="../images/pinJia.png"/>
 						</ul>
 					</div>
 					<div class="fr rightHot">
@@ -269,13 +269,17 @@
 						</ul>
 					</div>
 				</div>
-				
 			</div>
 		</div>
-		
 		<!--主体结束-->
 		
+		<!--回到顶部开始-->
+		<div id="toTop"></div>
+		<!--回到顶部结束-->
 		
+		<!--在线客服开始-->
+		<div id="onLine"></div>
+		<!--在线客服结束-->
 		
 		<!--底部开始-->
 		<div id="footWrap"></div>
@@ -337,17 +341,18 @@
 		function showHot( res ){
 			var str = "";
 			var arr = JSON.parse( res );
-			for( var i = 0; i < 9; i++ ){
+			for( var i = 0; i < 16; i++ ){
+				var rand = getRand(0,29);
 				str += `<li>
 							<a href="javascript:;">
 								<div class="img-box">
-									<img src="../images/${arr[getRand(0,29)].src}"/>
+									<img src="../images/${arr[rand].src}"/>
 								</div>
 								<div class="detail">
-									<h3>${arr[getRand(0,29)].info}</h3>
-									<p class="price">¥${arr[getRand(0,29)].price}</p>
-									<p>${arr[getRand(0,29)].country}
-										<img src="../images/${arr[getRand(0,29)].icon}"/>
+									<h3>${arr[rand].info}</h3>
+									<p class="price">¥${arr[rand].price}</p>
+									<p>${arr[rand].country}
+										<img src="../images/${arr[rand].icon}"/>
 									</p>
 								</div>
 							</a>
@@ -355,9 +360,39 @@
 			}
 			$( ".rightHot>ul" ).html( str );
 		}
-		
-		
 		/*右侧热销推荐结束*/
+		
+		/*点击商品介绍和商品评价  选项卡*/
+		$( "#main .proMsg h3>span" ).click( function(){
+			$( this ).addClass( "on" ).siblings().removeClass( "on" );
+			$( "#main .centerPic>ul" ).eq( $( this ).index() )
+						   .css( "display", "block" )
+						   .siblings()
+						   .css( "display", "none" )
+		} )
+		
+		/*回到顶部开始*/
+		$( document ).scroll( function(){
+			if( $( "html,body" ).scrollTop() > $( window ).innerHeight() ){
+				$( "#toTop" ).fadeIn();
+			}else{
+				$( "#toTop" ).fadeOut();
+			}
+		} )
+		$( "#toTop" ).click( function(){
+			$( "html,body" ).animate( { "scrollTop": 0 } );
+		} )
+		/*回到顶部结束*/
+		
+		/* 加入购物车
+		 通过url获取商品id 从json数据中查找   将对应商品信息存入cookie中 */
+		/*http://127.0.0.1/TPSshopping/html/proDetail.html?id=pro07*/
+		function addShopCar(){
+			var str = location.href;
+			var pId = str.split( "?" )[1].split( "=" )[1];
+			
+		}
+		addShopCar();
 	}
 	
 </script>

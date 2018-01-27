@@ -31,6 +31,9 @@
 	color: #ee4242;
 	background: #fff;
 }
+#top .top-l ol>li:hover>a{
+	color: #ee4242;
+}
 #top .top-l .country>a .cn-icon{
 	display: inline-block;
 	width: 16px;
@@ -256,6 +259,9 @@
 }
 #middle .search .search-hots{
 	margin-top: 5px;
+}
+#middle .search .search-hots>a:hover{
+	text-decoration: underline;
 }
 #middle .search .search-hots>a,.search-hots>b{
 	color: #666;

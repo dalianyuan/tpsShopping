@@ -521,3 +521,71 @@
 	color: #ee4242;
 }
 /*楼层侧栏导航结束*/
+
+/*appFloat开始*/
+#appFloat{
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 130px;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 10;
+}
+#appFloat .appContent{
+	position: relative;
+}
+#appFloat img{
+	margin-top: -52px;
+}
+#appFloat #closeBtn{
+    position: absolute;
+    right: -1px;
+    top: 15px;
+    z-index: 11;
+    background: url(../images/appCodeImg.png)no-repeat -16px 0px;
+    width: 26px;
+    height: 28px;
+}
+/*appFloat结束*/
+
+/*searchFloat开始*/
+.searchFloat{
+    position: fixed;
+    height: 50px!important;
+    top: -50px;
+    line-height: 50px;
+    margin-top: 100px;
+    z-index: 99;
+    width: 100%;
+    background: rgba(255,255,255,.9);
+    -webkit-box-shadow: 0 2px 4px rgba(0,0,0,.1);
+    box-shadow: 0 2px 4px rgba(0,0,0,.1);
+    display: none;
+}
+.searchFloat a:nth-child(1)>img{
+    display: inline-block;
+    margin-top: 0px!important;
+    width: 80px;
+    height: 36px;
+}
+.searchFloat a:nth-child(2)>img{
+	display: inline-block;
+    margin-top: 9px!important;
+    width: 60px;
+    height: 30px;
+}
+.searchFloat .search{
+	height: auto!important;
+	margin: 8px 0 0 320px!important;
+}
+.searchFloat .search>form{
+	height: 30px!important;
+}
+.searchFloat .search>form>input{
+	margin: 5px 10px!important;
+}
+.searchFloat .search>form>button{
+	height: 30px!important;
+}
+/*searchFloat结束*/
