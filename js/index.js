@@ -9,6 +9,18 @@ window.onload = function(){
 	}
 	loadHtml().then( function(){
 		
+		/*国家和币种选择开始*/
+		$( "#headWrap" ).on( "mouseenter", ".top-l ol>li", function(){
+			$( this ).find( "a" ).css( "color", "#ee4242" ).parent().siblings().find( "a" ).css( "color", "#333" );
+		} )
+		$( "#headWrap" ).on( "click", ".top-l ol>li", function(){
+			var str = "";
+			str = `${$(this).find( "a" ).html()}
+					<i class="iconfont icon-sanjiao"></i>`;
+			$( this ).parent().prev().html( str );
+		} )
+		/*国家和币种选择结束*/
+		
 		/*banner轮播图开始*/
 		var index = 0;//控制数字下标
 		var timer = setInterval( autoPlay, 3000 );
@@ -286,7 +298,6 @@ window.onload = function(){
 			
 		}
 		showLouti();
-		
 		
 		/*点击closeBtn关闭浮动的app*/
 		$( "#closeBtn" ).click( function(){

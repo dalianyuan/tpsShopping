@@ -1,0 +1,149 @@
+/*main开始*/
+#main{
+	margin-bottom: 52px;
+}
+#main .title{
+	height: 36px;
+	line-height: 36px;
+	font-size: 16px;
+	font-weight: bold;
+}
+#main .title #num{
+    margin-left: 10px;
+    padding: 0 .8%;
+    line-height: 18px;
+    border: solid 1px #e4393c;
+    color: #e4393c;
+}
+#box .col-1{
+	width: 8.33333%;
+}
+#box .col-2{
+	width: 16.6667%;
+}
+#box .col-3{
+	width: 25%;
+}
+#box dl{
+    border: solid 1px #ccc;
+    background: #fff;
+}
+#box dl>dt{
+	padding: 0 40px;
+    height: 40px;
+    line-height: 40px;
+    text-align: center;
+    background: #f7f5fa;
+    border-bottom: solid 1px #ccc;
+}
+#box dl>dt>span:nth-child(1){
+	text-align: left;
+}
+#box .mtr14-4{
+	margin: 14px 4px 0 0;
+}
+#box dl>dd{
+    padding: 10px 40px;
+    color: #333;
+    border-bottom: dotted 1px #ccc;
+}
+#box dl>.item{
+	text-align: center;
+	
+}
+#box dl>.item .img{
+    border: solid 1px #ccc;
+}
+#box dl>.item .saleInCn{
+	margin-top: 14px;
+}
+#box dl>.item .saleInCn>a{
+	line-height: 20px;
+}
+#box dl>.item .saleInCn>a:hover{
+	color: #ec5766;
+}
+#box dl>.item .saleInCn>p{
+	display: inline-block;
+    margin-top: 1.5%;
+    padding: 5px 24px;
+    background: #ec5766;
+    color: #fff;
+    text-align: center;
+    white-space: nowrap;
+}
+#box dl .price{
+    font-size: 16px;
+}
+#box dl .mt-28{
+	margin-top: 28px;
+}
+#box dl>.item .jiaJian{
+	width: 100px;
+    height: 25px;
+	margin-left: 44px;
+}
+#box dl>.item .jiaJian>a{
+    display: inline-block;
+    width: 25px;
+    height: 25px;
+    line-height: 25px;
+    border: 1px solid #d9d9d9;
+    background-color: #f7f7f7;
+    cursor: pointer;
+}
+#box dl>.item .jiaJian>input{
+    width: 36px;
+    height: 17px;
+    padding: 4px 5px;
+    line-height: 17px;
+    border-width: 1px 0;
+    border-style: solid;
+    border-color: #d9d9d9;
+    text-align: center;
+    color: #565656;
+    outline: 0;
+}
+#box dl>.selAll{
+	padding-top: 16px;
+	padding-bottom: 16px;
+}
+#box dl>.selAll input{
+	margin: 2px 4px 0 0;
+}
+#box dl>.selAll a{
+	margin-left: 44px;
+}
+#box dl>.selAll a:hover{
+	color: #ec5766;
+}
+#box dl>dd:last-child{
+	padding: 10px 20px;
+	text-align: right;
+}
+#box dl>dd>div{
+    position: relative;
+    padding: 30px 20px;
+    min-height: 80px;
+    background: #fdfbf2;
+    line-height: 20px;
+}
+#box .gongJi{
+	font-size: 14px;
+	margin-bottom: 16px;
+}
+#box .gongJi b{
+    color: #ff2f00;
+    font-size: 14px;
+    display: block;
+}
+#box .jieSuan>a{
+    background: #e61000;
+    padding: .8% 4%;
+    border: none;
+    color: #fff;
+    font-weight: 600;
+    font-size: 14px;
+    font-family: '\5b8b\4f53';
+}
+/*main结束*/

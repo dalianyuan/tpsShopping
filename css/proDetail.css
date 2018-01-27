@@ -70,6 +70,7 @@
 	border: 1px solid #ddd;
 	overflow: hidden;
 	display: none;
+	z-index: 10;
 }
 #main .good #box #bigImg{
 	position: absolute;
@@ -174,7 +175,56 @@
     font-size: 14px;
 }
 #main .good .info .shop-cart{
+	position: relative;
 	padding-left: 60px;
+}
+#main .good .info .shop-cart .addSuccess{
+	display: none;
+    position: absolute;
+    z-index: 8;
+    margin-bottom: -88px;
+    bottom: 100%;
+    left: 60px;
+    border: solid 1px #e65050;
+    background: #fff;
+    width: 350px;
+    height: 116px;
+    padding-left: 32px;
+    box-shadow: 2px 2px 4px #e3e3e3;
+}
+#main .good .info .shop-cart .addSuccess>p{
+	padding: 2% 6%;
+    line-height: 40px;
+    font-size: 16px;
+}
+#main .good .info .addSuccess>p:nth-child(1)>s{
+    display: inline-block;
+    width: 24px;
+    height: 24px;
+    margin: 8px 6% 0 0;
+    background: url(../images/product.png) no-repeat -26px -35px;
+}
+#main .good .info .addSuccess>p:nth-child(2)>a{
+    padding: 8px 10px;
+    height: auto;
+    width: auto;
+    border-radius: 3px;
+    float: none;
+    font-size: 14px;
+    margin-right: 20px;
+    line-height: 2;
+    text-align: center;
+    border: 1px solid #ed4242;
+}
+#main .good .info .addSuccess>p:nth-child(2)>a:nth-child(1){
+    background: #ed4242;
+    color: #fff;
+}
+#main .good .info .addSuccess>p:nth-child(2)>a:nth-child(2){
+    background: #ffebeb;
+    /*border: 1px solid #ed4242;*/
+    color: #ff6600;
+    /*text-align: center;*/
 }
 #main .good .info .shop-cart>a{
 	display: inline-block;

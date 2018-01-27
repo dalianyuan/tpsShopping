@@ -202,6 +202,7 @@
 	height: 40px;
 	background: #ececec;
 	font-size: 16px;
+	cursor: pointer;
 	border: 2px solid #ececec;
 }
 #middle .shopcar i{
