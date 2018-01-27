@@ -72,6 +72,9 @@
 #top .top-l .country>ol>li>a s.xianggang{
 	background-position-y: -23px;
 }
+#top .top-l .country>ol>li>a s.cn-icon{
+	background-position-y: -11px;
+}
 
 #top .top-l .money{
 	width: 68px;

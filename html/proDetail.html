@@ -2,8 +2,362 @@
 <html>
 	<head>
 		<meta charset="UTF-8">
-		<title></title>
+		<title>商品详情</title>
+		<link rel="stylesheet" type="text/css" href="../css/reset.css"/>
+		<link rel="stylesheet" type="text/css" href="../css/public.css"/>
+		<link rel="stylesheet" type="text/css" href="../css/header.css"/>
+		<link rel="stylesheet" type="text/css" href="../css/footer.css"/>
+		<link rel="stylesheet" type="text/css" href="../css/proDetail.css"/>
+		<link rel="stylesheet" type="text/css" href="../font_fkny25wzsjfhto6r/iconfont.css"/>
+		<script src="../js/jquery-1.11.1.min.js" type="text/javascript" charset="utf-8"></script>
+		<script src="../js/public.js" type="text/javascript" charset="utf-8"></script>
+		<script src="../js/ajax.js" type="text/javascript" charset="utf-8"></script>
 	</head>
 	<body>
+		<!--头部开始-->
+		<div id="headWrap"></div>
+		<!--头部结束-->
+		
+		<!--主体开始-->
+		<div id="main">
+			<div class="w1200">
+				<div class="top">
+					<p> <a href="index.html">首页</a> > 食品酒水 > 中外名酒 > 葡萄酒> 进口美国加州混酿红葡萄酒2支 750ml*2瓶 全国包邮</p>
+					<div class="good">
+						<div class="fl" id="box">
+							<div id="small">
+								<img id="smallImg" src="../images/pro_big01.jpg"/>
+								<div id="ceng"></div>
+								<div id="mask"><img id="maskImg" src="../images/pro_big01.jpg"/></div>
+							</div>
+							<ul id="smallList">
+								<li class="fl"><img class="active" src="../images/pro_thumb01.jpg"/></li>
+								<li class="fl"><img src="../images/pro_thumb02.jpg"/></li>
+								<li class="fl"><img src="../images/pro_thumb03.jpg"/></li>
+								<li class="fl"><img src="../images/pro_thumb04.jpg"/></li>
+								<li class="fl"><img src="../images/pro_thumb05.jpg"/></li>
+								<li class="fl"><img src="../images/pro_thumb06.jpg"/></li>
+							</ul>
+							<div id="big">
+								<img id="bigImg" src="../images/pro_big01.jpg"/>
+							</div>
+						</div>
+						<div class="fr info">
+							<div class="title">
+								<span>包邮</span>
+								<h1>进口美国加州混酿红葡萄酒2支  750ml*2瓶 全国包邮</h1>
+								<p>因该商品属于酒水，除破损外，不予7天无条件退换。</p>
+							</div>
+							<p>
+								商品编码:
+								<span>84600889-1</span>
+								<span>原产地: 美国</span>
+							</p>
+							<p class="price">价格: <b>¥1,597.33</b> </p>
+							<dl>
+								<dt class="fl">数量:</dt>
+								<dd class="fl">
+									<span>
+										<input class="fl" type="text" id="txt" value="1" />
+										<span class="fl">
+											<i class="add">+</i>
+											<i class="reduce">-</i>
+										</span>
+									</span>
+									<em>库存 : <span id="num"> 937</span></em>
+								</dd>
+							</dl>
+							<p class="address">发货地 : &nbsp;&nbsp;&nbsp; 福州市</p>
+							<div class="shop-cart">
+								<a href="javascript:;" id="buy">
+									<span>￥</span>
+									立即购买
+								</a>
+								<a href="shopCar.html" id="cart">
+									<i></i>
+									加入购物车
+								</a>
+								<a href="javascript:;" id="care">
+									<span>+</span>
+									添加关注
+									<b>(79)</b>
+								</a>
+							</div>
+						</div>
+					</div>
+				</div>
+				
+				<div class="proMsg">
+					<h3>
+						<span class="on">商品介绍</span>
+						<span>商品评价</span>
+					</h3>
+					<div class="fl leftList">
+						<h3>全部分类</h3>
+						<ul>
+							<li>
+								<a href="javascript:;">母婴用品</a>
+								<a href="javascript:;">婴幼儿奶粉</a>
+								<a href="javascript:;">喂养洗护用品</a>
+								<a href="javascript:;">婴儿服饰</a>
+								<a href="javascript:;">玩具乐器</a>
+								<a href="javascript:;">尿裤湿巾</a>
+								<a href="javascript:;">婴幼儿辅食</a>
+								<a href="javascript:;">童车童床</a>
+								<a href="javascript:;">婴幼儿营养品</a>
+								<a href="javascript:;">孕产妇用品</a>
+							</li>
+							<li>
+								<a href="javascript:;">美妆个护</a>
+								<a href="javascript:;">香水彩妆</a>
+								<a href="javascript:;">面部护理</a>
+								<a href="javascript:;">女性护理</a>
+								<a href="javascript:;">口腔护理</a>
+								<a href="javascript:;">身体护理</a>
+								<a href="javascript:;">洗发护发</a>
+								<a href="javascript:;">清洁用品</a>
+							</li>
+							<li>
+								<a href="javascript:;">礼品箱包</a>
+								<a href="javascript:;">功能箱包</a>
+								<a href="javascript:;">礼品</a>
+								<a href="javascript:;">精品男包</a>
+								<a href="javascript:;">潮流女包</a>
+							</li>
+							<li>
+								<a href="javascript:;">家居日用</a>
+								<a href="javascript:;">精美餐具</a>
+								<a href="javascript:;">烹饪锅具</a>
+								<a href="javascript:;">家纺</a>
+								<a href="javascript:;">五金/工具</a>
+								<a href="javascript:;">生活用品</a>
+								<a href="javascript:;">厨具</a>
+								<a href="javascript:;">厨房配件</a>
+								<a href="javascript:;">家装软饰</a>
+								<a href="javascript:;">园艺休闲</a>
+								<a href="javascript:;">办公文教</a>
+								<a href="javascript:;">装修服务</a>
+							</li>
+							<li>
+								<a href="javascript:;">运动户外</a>
+								<a href="javascript:;">户外装备</a>
+								<a href="javascript:;">健身训练</a>
+								<a href="javascript:;">体育用品</a>
+								<a href="javascript:;">骑行运动</a>
+								<a href="javascript:;">游泳用品</a>
+								<a href="javascript:;">运动鞋</a>
+								<a href="javascript:;">运动包/配件</a>
+								<a href="javascript:;">运动服</a>
+							</li>
+							<li>
+								<a href="javascript:;">汽车用品</a>
+								<a href="javascript:;">车载电器</a>
+								<a href="javascript:;">汽车装饰</a>
+								<a href="javascript:;">维修保养</a>
+								<a href="javascript:;">安全自驾</a>
+								<a href="javascript:;">汽车服务</a>
+							</li>
+							<li>
+								<a href="javascript:;">食品酒水</a>
+								<a href="javascript:;">休闲食品</a>
+								<a href="javascript:;">进口食品</a>
+								<a href="javascript:;">粮油米面</a>
+								<a href="javascript:;">中外名酒</a>
+								<a href="javascript:;">地方特产</a>
+								<a href="javascript:;">茶叶</a>
+								<a href="javascript:;">生鲜果蔬</a>
+							</li>
+							<li>
+								<a href="javascript:;">钟表首饰</a>
+								<a href="javascript:;">耳饰类</a>
+								<a href="javascript:;">项链/吊坠类</a>
+								<a href="javascript:;">眼镜</a>
+								<a href="javascript:;">手镯/手链类</a>
+								<a href="javascript:;">戒指</a>
+								<a href="javascript:;">钟表</a>
+								<a href="javascript:;">时尚饰品</a>
+							</li>
+							<li>
+								<a href="javascript:;">医药保健</a>
+								<a href="javascript:;">营养健康</a>
+								<a href="javascript:;">护理护具</a>
+								<a href="javascript:;">家庭保健</a>
+								<a href="javascript:;">计生情趣</a>
+								<a href="javascript:;">中西药品</a>
+							</li>
+							<li>
+								<a href="javascript:;">数码家电</a>
+								<a href="javascript:;">家用电器</a>
+								<a href="javascript:;">耳机</a>
+								<a href="javascript:;">手机配件</a>
+								<a href="javascript:;">智能设备</a>
+								<a href="javascript:;">影音娱乐</a>
+								<a href="javascript:;">电子教育</a>
+								<a href="javascript:;">摄影摄像</a>
+								<a href="javascript:;">电脑配件</a>
+							</li>
+							<li>
+								<a href="javascript:;">宠物生活</a>
+								<a href="javascript:;">宠物主粮</a>
+								<a href="javascript:;">宠物食品</a>
+								<a href="javascript:;">水族用品</a>
+								<a href="javascript:;">宠物医疗保健</a>
+								<a href="javascript:;">宠物居家日用</a>
+								<a href="javascript:;">宠物美容/出行</a>
+							</li>
+							<li>
+								<a href="javascript:;">服饰鞋帽</a>
+								<a href="javascript:;">女装</a>
+								<a href="javascript:;">男装</a>
+								<a href="javascript:;">内衣</a>
+								<a href="javascript:;">童装</a>
+								<a href="javascript:;">服饰配件</a>
+								<a href="javascript:;">时尚男鞋</a>
+								<a href="javascript:;">精品女鞋</a>
+							</li>
+							<li>
+								<a href="javascript:;">生活服务</a>
+								<a href="javascript:;">餐饮</a>
+								<a href="javascript:;">旅游</a>
+								<a href="javascript:;">中医养生</a>
+								<a href="javascript:;">美容会馆</a>
+								<a href="javascript:;">上门清洁</a>
+								<a href="javascript:;">汽车保养</a>
+								<a href="javascript:;">同城配送</a>
+								<a href="javascript:;">婚纱摄影</a>
+								<a href="javascript:;">酒店</a>
+								<a href="javascript:;">休闲娱乐</a>
+								<a href="javascript:;">票务</a>
+								<a href="javascript:;">其它服务</a>
+							</li>
+						</ul>
+					</div>
+					<div class="fl centerPic">
+						<ul class="proImg">
+							<li><img src="../images/inform01.jpg"/></li>
+							<li><img src="../images/inform02.jpg"/></li>
+							<li><img src="../images/inform03.jpg"/></li>
+							<li><img src="../images/inform04.jpg"/></li>
+							<li><img src="../images/inform05.jpg"/></li>
+							<li><img src="../images/inform06.jpg"/></li>
+							<li><img src="../images/inform07.jpg"/></li>
+							<li><img src="../images/inform08.jpg"/></li>
+							<li><img src="../images/inform09.jpg"/></li>
+							<li><img src="../images/inform10.jpg"/></li>
+						</ul>
+						<ul class="proGrade">
+							
+						</ul>
+					</div>
+					<div class="fr rightHot">
+						<h3>热销推荐</h3>
+						<ul>
+							<li>
+								<a href="javascript:;">
+									<div class="img-box">
+										<img src="../images/5a67e6f57ceb8_main_w250_h250.jpg"/>
+									</div>
+									<div class="detail">
+										<h3>设计师品牌新款优雅气质经典显瘦长款青果领羊毛大衣咖色SHUIZHI059  全国包邮</h3>
+										<p class="price">¥1,483.46</p>
+										<p>中国
+											<img src="../images/cn.jpg"/>
+										</p>
+									</div>
+								</a>
+							</li>
+						</ul>
+					</div>
+				</div>
+				
+			</div>
+		</div>
+		
+		<!--主体结束-->
+		
+		
+		
+		<!--底部开始-->
+		<div id="footWrap"></div>
+		<!--底部结束-->
 	</body>
 </html>
+<script type="text/javascript">
+	window.onload = function(){
+		/*加载头部和底部信息*/
+		$( "#headWrap" ).load( "header.html" );
+		$( "#footWrap" ).load( "footer.html" );
+		
+		/*放大镜开始*/
+		/*鼠标移入底部小图 切换大图的src*/
+		$( "#smallList" ).on( "mouseenter", "li", function(){
+			var index = $( this ).index();
+			$( this ).find( "img" ).addClass( "active" ).parent().siblings().find( "img" ).removeClass( "active" );
+			$( "#smallImg" ).attr( "src", "../images/pro_big0" + (index+1) + ".jpg" );
+			$( "#maskImg" ).attr( "src", "../images/pro_big0" + (index+1) + ".jpg" );
+			$( "#bigImg" ).attr( "src", "../images/pro_big0" + (index+1) + ".jpg" );
+		} )
+		/*鼠标移入移出 控制mask和大图的显示和隐藏*/
+		$( "#small" ).hover( function(){
+			$( "#ceng" ).css( "display", "block" );
+			$( "#mask" ).css( "display", "block" );
+			$( "#big" ).css( "display", "block" );
+		}, function(){
+			$( "#ceng" ).css( "display", "none" );
+			$( "#mask" ).css( "display", "none" );
+			$( "#big" ).css( "display", "none" );
+		} )
+		/*鼠标移动  放大效果*/
+		$( "#small" ).mousemove( function( e ){
+			var e = e || event;
+			var x = e.pageX - $( "#box" ).offset().left - $( "#mask" ).width()/2;
+			var y = e.pageY - $( "#box" ).offset().top - $( "#mask" ).height()/2;
+			var maxL = $( "#box" ).outerWidth() - $( "#mask" ).width();
+			var maxT = $( "#box" ).outerHeight() - $( "#mask" ).height();
+			x = Math.min( Math.max( 0, x ), maxL );
+			y = Math.min( Math.max( 0, y ), maxT );
+			$( "#mask" ).css( {
+							"left" : x,
+							"top" : y
+						} )
+			$( "#maskImg" ).css( {
+							"left" : -x,
+							"top" : -y
+						} )
+			$( "#bigImg" ).css( {
+							"left" : -x*$( "#bigImg" ).width()/$( "#maskImg" ).width(),
+							"top" : -y*$( "#bigImg" ).height()/$( "#maskImg" ).height()
+						} )
+		} )
+		/*放大镜结束*/
+		
+		/*右侧热销推荐开始*/
+		/*ajax请求数据*/
+		ajaxGet( "../json/newData.json", showHot );
+		function showHot( res ){
+			var str = "";
+			var arr = JSON.parse( res );
+			for( var i = 0; i < 9; i++ ){
+				str += `<li>
+							<a href="javascript:;">
+								<div class="img-box">
+									<img src="../images/${arr[getRand(0,29)].src}"/>
+								</div>
+								<div class="detail">
+									<h3>${arr[getRand(0,29)].info}</h3>
+									<p class="price">¥${arr[getRand(0,29)].price}</p>
+									<p>${arr[getRand(0,29)].country}
+										<img src="../images/${arr[getRand(0,29)].icon}"/>
+									</p>
+								</div>
+							</a>
+						</li>`;
+			}
+			$( ".rightHot>ul" ).html( str );
+		}
+		
+		
+		/*右侧热销推荐结束*/
+	}
+	
+</script>

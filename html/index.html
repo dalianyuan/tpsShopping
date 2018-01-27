@@ -4,9 +4,17 @@
 		<meta charset="UTF-8">
 		<title>TPS商城-正品低价、品质保证、享受优惠，轻松购物!</title>
 		<link rel="stylesheet" type="text/css" href="../css/reset.css"/>
+		<link rel="stylesheet" type="text/css" href="../css/public.css"/>
+		<link rel="stylesheet" type="text/css" href="../css/header.css"/>
+		<link rel="stylesheet" type="text/css" href="../css/footer.css"/>
 		<link rel="stylesheet" type="text/css" href="../css/index.css"/>
 		<link rel="stylesheet" type="text/css" href="../font_pmmze34thplj714i/iconfont.css"/>
+		<link rel="stylesheet" type="text/css" href="../font_fkny25wzsjfhto6r/iconfont.css"/>
 		<script src="../js/jquery-1.11.1.min.js" type="text/javascript" charset="utf-8"></script>
+		<script src="../js/public.js" type="text/javascript" charset="utf-8"></script>
+		<script src="../js/ajax.js" type="text/javascript" charset="utf-8"></script>
+		<script src="../js/header.js" type="text/javascript" charset="utf-8"></script>
+		<script src="../js/index.js" type="text/javascript" charset="utf-8"></script>
 	</head>
 	<body>
 		<!--头部开始-->
@@ -15,57 +23,1406 @@
 		
 		<!--导航开始-->
 		<div id="banner">
-			<div class="pic"></div>
-			<ul id="banner-nav-list">
-				<li class="active">1</li>
-				<li>2</li>
-				<li>3</li>
-				<li>4</li>
-				<li>5</li>
-				<li>6</li>
-				<li>7</li>
-				<li>8</li>
-				<li>9</li>
-				<li>10</li>
-			</ul>
-			<div id="arr">
-				<div id="toLeft"> < </div>
-				<div id="toRight"> > </div>
-			</div>
+				<ul id="picUl">
+					<li class="pic"></li>
+					<li class="pic"></li>
+					<li class="pic"></li>
+					<li class="pic"></li>
+					<li class="pic"></li>
+					<li class="pic"></li>
+					<li class="pic"></li>
+					<li class="pic"></li>
+					<li class="pic"></li>
+					<li class="pic"></li>
+				</ul>
+			
+				<ul id="banner-nav-list">
+					<li class="active">1</li>
+					<li>2</li>
+					<li>3</li>
+					<li>4</li>
+					<li>5</li>
+					<li>6</li>
+					<li>7</li>
+					<li>8</li>
+					<li>9</li>
+					<li>10</li>
+				</ul>
+				<div id="arr">
+					<div id="toLeft"> < </div>
+					<div id="toRight"> > </div>
+				</div>
 		</div>
 		<!--导航结束-->
 		
 		<!--页面主体开始-->
 		<div id="main">
 			<div class="w1200">
-				<div class="product">
+				<!--新品上架开始-->
+				<div class="product hotP">
 					<div class="proTitle">
-						
+						<b>新品上架</b>
+						<em class="fs-18 mlr10">/</em>
+						<span class="fs-14">每天一点小期待</span>
+						<a class="fr fs-14" href="javascript:;">更多 &gt;</a>
 					</div>
-					<div class="proList">
+					<div class="proWrap">
+						<div class="proList">
+							<ul class="fl">
+								<li class="fl">
+									<a href="javascript:;">
+										<p>
+											<i class="iconfont icon-icon--"></i>
+											<i class="iconfont icon-xiaohuoche"></i>
+										</p>
+										<div class="img-box">
+											<img src="../images/5a67e6f57ceb8_main_w250_h250.jpg"/>
+										</div>
+										<div class="detail">
+											<h3>设计师品牌新款优雅气质经典显瘦长款青果领羊毛大衣咖色SHUIZHI059  全国包邮</h3>
+											<p class="price">¥1,483.46</p>
+											<p>中国
+												<img src="../images/cn.jpg"/>
+											</p>
+										</div>
+									</a>
+								</li>
+							</ul>
+						</div>
+					</div>
+					<span class="prev">&lt;</span>
+					<span class="next">&gt;</span>
+				</div>
+				<!--新品上架结束-->
+				
+				<!--热卖推荐开始-->
+				<div class="product hotP">
+					<div class="proTitle">
+						<b>热卖推荐</b>
+						<em class="fs-18 mlr10">/</em>
+						<span class="fs-14">"网红好货",怎能错过</span>
+						<a class="fr fs-14" href="javascript:;">更多 &gt;</a>
+					</div>
+					<div class="proContent">
 						<ul>
-							<li>
+							<li class="fl">
 								<a href="javascript:;">
-									
+									<p class="fl">
+										<i class="iconfont icon-icon-test"></i>
+										<i class="iconfont icon-xiaohuoche"></i>
+									</p>
+									<div class="img-box">
+										<img src="../images/596328e91333e_main.jpg"/>
+									</div>
+									<div class="fl detail">
+										<h3>设计师品牌新款优雅气质经典显瘦长款青果领羊毛大衣咖色SHUIZHI059  全国包邮</h3>
+										<p class="price">¥1,483.46</p>
+										<p>中国
+											<img src="../images/cn.jpg"/>
+										</p>
+									</div>
+								</a>
+							</li>
+							<li class="fl">
+								<a href="javascript:;">
+									<p class="fl">
+										<i class="iconfont icon-icon-test"></i>
+										<i class="iconfont icon-xiaohuoche"></i>
+									</p>
+									<div class="img-box">
+										<img src="../images/596328e91333e_main.jpg"/>
+									</div>
+									<div class="fl detail">
+										<h3>设计师品牌新款优雅气质经典显瘦长款青果领羊毛大衣咖色SHUIZHI059  全国包邮</h3>
+										<p class="price">¥1,483.46</p>
+										<p>中国
+											<img src="../images/cn.jpg"/>
+										</p>
+									</div>
+								</a>
+							</li>
+							<li class="fl">
+								<a class="noRborder" href="javascript:;">
+									<p class="fl">
+										<i class="iconfont icon-icon-test"></i>
+										<i class="iconfont icon-xiaohuoche"></i>
+									</p>
+									<div class="img-box">
+										<img src="../images/596328e91333e_main.jpg"/>
+									</div>
+									<div class="fl detail">
+										<h3>设计师品牌新款优雅气质经典显瘦长款青果领羊毛大衣咖色SHUIZHI059  全国包邮</h3>
+										<p class="price">¥1,483.46</p>
+										<p>中国
+											<img src="../images/cn.jpg"/>
+										</p>
+									</div>
+								</a>
+							</li>
+							<li class="fl">
+								<a href="javascript:;">
+									<p class="fl">
+										<i class="iconfont icon-icon-test"></i>
+										<i class="iconfont icon-xiaohuoche"></i>
+									</p>
+									<div class="img-box">
+										<img src="../images/596328e91333e_main.jpg"/>
+									</div>
+									<div class="fl detail">
+										<h3>设计师品牌新款优雅气质经典显瘦长款青果领羊毛大衣咖色SHUIZHI059  全国包邮</h3>
+										<p class="price">¥1,483.46</p>
+										<p>中国
+											<img src="../images/cn.jpg"/>
+										</p>
+									</div>
+								</a>
+							</li>
+							<li class="fl">
+								<a href="javascript:;">
+									<p class="fl">
+										<i class="iconfont icon-icon-test"></i>
+										<i class="iconfont icon-xiaohuoche"></i>
+									</p>
+									<div class="img-box">
+										<img src="../images/596328e91333e_main.jpg"/>
+									</div>
+									<div class="fl detail">
+										<h3>设计师品牌新款优雅气质经典显瘦长款青果领羊毛大衣咖色SHUIZHI059  全国包邮</h3>
+										<p class="price">¥1,483.46</p>
+										<p>中国
+											<img src="../images/cn.jpg"/>
+										</p>
+									</div>
+								</a>
+							</li>
+							<li class="fl">
+								<a class="noRborder" href="javascript:;">
+									<p class="fl">
+										<i class="iconfont icon-icon-test"></i>
+										<i class="iconfont icon-xiaohuoche"></i>
+									</p>
+									<div class="img-box">
+										<img src="../images/596328e91333e_main.jpg"/>
+									</div>
+									<div class="fl detail">
+										<h3>设计师品牌新款优雅气质经典显瘦长款青果领羊毛大衣咖色SHUIZHI059  全国包邮</h3>
+										<p class="price">¥1,483.46</p>
+										<p>中国
+											<img src="../images/cn.jpg"/>
+										</p>
+									</div>
+								</a>
+							</li>
+							<li class="fl">
+								<a href="javascript:;">
+									<p class="fl">
+										<i class="iconfont icon-icon-test"></i>
+										<i class="iconfont icon-xiaohuoche"></i>
+									</p>
+									<div class="img-box">
+										<img src="../images/596328e91333e_main.jpg"/>
+									</div>
+									<div class="fl detail">
+										<h3>设计师品牌新款优雅气质经典显瘦长款青果领羊毛大衣咖色SHUIZHI059  全国包邮</h3>
+										<p class="price">¥1,483.46</p>
+										<p>中国
+											<img src="../images/cn.jpg"/>
+										</p>
+									</div>
+								</a>
+							</li>
+							<li class="fl">
+								<a href="javascript:;">
+									<p class="fl">
+										<i class="iconfont icon-icon-test"></i>
+										<i class="iconfont icon-xiaohuoche"></i>
+									</p>
+									<div class="img-box">
+										<img src="../images/596328e91333e_main.jpg"/>
+									</div>
+									<div class="fl detail">
+										<h3>设计师品牌新款优雅气质经典显瘦长款青果领羊毛大衣咖色SHUIZHI059  全国包邮</h3>
+										<p class="price">¥1,483.46</p>
+										<p>中国
+											<img src="../images/cn.jpg"/>
+										</p>
+									</div>
+								</a>
+							</li>
+							<li class="fl">
+								<a class="noRborder" href="javascript:;">
+									<p class="fl">
+										<i class="iconfont icon-icon-test"></i>
+										<i class="iconfont icon-xiaohuoche"></i>
+									</p>
+									<div class="img-box">
+										<img src="../images/596328e91333e_main.jpg"/>
+									</div>
+									<div class="fl detail">
+										<h3>设计师品牌新款优雅气质经典显瘦长款青果领羊毛大衣咖色SHUIZHI059  全国包邮</h3>
+										<p class="price">¥1,483.46</p>
+										<p>中国
+											<img src="../images/cn.jpg"/>
+										</p>
+									</div>
+								</a>
+							</li>
+							<li class="fl">
+								<a href="javascript:;">
+									<p class="fl">
+										<i class="iconfont icon-icon-test"></i>
+										<i class="iconfont icon-xiaohuoche"></i>
+									</p>
+									<div class="img-box">
+										<img src="../images/596328e91333e_main.jpg"/>
+									</div>
+									<div class="fl detail">
+										<h3>设计师品牌新款优雅气质经典显瘦长款青果领羊毛大衣咖色SHUIZHI059  全国包邮</h3>
+										<p class="price">¥1,483.46</p>
+										<p>中国
+											<img src="../images/cn.jpg"/>
+										</p>
+									</div>
+								</a>
+							</li>
+							<li class="fl">
+								<a href="javascript:;">
+									<p class="fl">
+										<i class="iconfont icon-icon-test"></i>
+										<i class="iconfont icon-xiaohuoche"></i>
+									</p>
+									<div class="img-box">
+										<img src="../images/596328e91333e_main.jpg"/>
+									</div>
+									<div class="fl detail">
+										<h3>设计师品牌新款优雅气质经典显瘦长款青果领羊毛大衣咖色SHUIZHI059  全国包邮</h3>
+										<p class="price">¥1,483.46</p>
+										<p>中国
+											<img src="../images/cn.jpg"/>
+										</p>
+									</div>
+								</a>
+							</li>
+							<li class="fl">
+								<a class="noRborder" href="javascript:;">
+									<p class="fl">
+										<i class="iconfont icon-icon-test"></i>
+										<i class="iconfont icon-xiaohuoche"></i>
+									</p>
+									<div class="img-box">
+										<img src="../images/596328e91333e_main.jpg"/>
+									</div>
+									<div class="fl detail">
+										<h3>设计师品牌新款优雅气质经典显瘦长款青果领羊毛大衣咖色SHUIZHI059  全国包邮</h3>
+										<p class="price">¥1,483.46</p>
+										<p>中国
+											<img src="../images/cn.jpg"/>
+										</p>
+									</div>
 								</a>
 							</li>
 						</ul>
 					</div>
-					<span class="prev"> < </span>
-					<span class="next"> > </span>
 				</div>
+				<!--热卖推荐结束-->
+				
+				<!--全球购开始-->
+				<div class="product hotP">
+					<div class="proTitle">
+						<b>全球购</b>
+						<em class="fs-18 mlr10">/</em>
+						<span class="fs-14">品质好货,全球低价</span>
+					</div>
+					<ul class="global">
+						<li class="fl">
+							<a href="javascript:;"></a>
+						</li>
+						<li class="fl">
+							<a href="javascript:;"></a>
+						</li>
+						<li class="fl">
+							<a href="javascript:;"></a>
+						</li>
+						<li class="fl">
+							<a href="javascript:;"></a>
+						</li>
+						<li class="fl mt70">
+							<a href="javascript:;"></a>
+						</li>
+						<li class="fl mt70">
+							<a href="javascript:;"></a>
+						</li>
+						<li class="fl mt70">
+							<a href="javascript:;"></a>
+						</li>
+						<li class="fl mt70">
+							<a href="javascript:;"></a>
+						</li>
+					</ul>
+				</div>
+				<!--全球购结束-->
+				
+				<!--首页楼层开始-->
+				
+				<!--一楼美妆个护开始-->
+				<div class="floor">
+					<!--楼层title-->
+					<div class="title">
+						<h2>美妆个护</h2>
+						<p>
+							<a href="javascript:;">洁面</a>
+							<a href="javascript:;">护肤套装</a>
+							<a href="javascript:;">防晒</a>
+							<a href="javascript:;">美白</a>
+							<a href="javascript:;">精油</a>
+							<a href="javascript:;">无硅油</a>
+							<a href="javascript:;">彩妆</a>
+							<a href="javascript:;">沐浴</a>
+							<a class="fr" href="javascript:;">更多 ></a>
+						</p>
+					</div>
+					<!--楼层轮播图-->
+					<div class="lunbo">
+						<div class="fl l-aside">
+							<img src="../images/cate_35.jpg"/>
+							<ul>
+								<li class="fl"><a href="javascript:;">香水彩妆</a></li>
+								<li class="fl"><a href="javascript:;">面部护理</a></li>
+								<li class="fl"><a href="javascript:;">口腔护理</a></li>
+								<li class="fl"><a href="javascript:;">女性护理</a></li>
+								<li class="fl"><a href="javascript:;">身体护理</a></li>
+								<li class="fl"><a href="javascript:;">洗发护发</a></li>
+								<li class="fl"><a href="javascript:;">清洁用品</a></li>
+							</ul>
+						</div>
+						<div class="fl c-lunbo">
+							<ul id="img-list" class="louti1">
+								<li class="fl"><img src="../images/sBanner11.jpg"></li>
+								<li class="fl"><img src="../images/sBanner12.jpg"></li>
+								<li class="fl"><img src="../images/sBanner13.jpg"></li>
+								<li class="fl"><img src="../images/sBanner14.jpg"></li>
+								<li class="fl"><img src="../images/sBanner15.jpg"></li>
+								<li class="fl"><img src="../images/sBanner11.jpg"></li>
+							</ul>
+							<ul id="numberList">
+								<li class="activeLi"></li>
+								<li></li>
+								<li></li>
+								<li></li>
+								<li></li>
+							</ul>
+							<div id="l-r">
+								<div id="toL"> < </div>
+								<div id="toR"> > </div>
+							</div>
+						</div>
+						<div class="fr r-lunbo">
+							<ul class="toLR1">
+								<li class="fl">
+									<a href="javascript:;"><img src="../images/9aad1c7ada0f850cae5dc73d072df553.jpg"/></a>
+									<a href="javascript:;"><img src="../images/94292b55041fde978197bb2017bbeb33.jpg"/></a>
+									<a href="javascript:;"><img src="../images/0fe41dc0266cc9c5fad7cd7c02a08e98.jpg"/></a>
+									<a href="javascript:;"><img src="../images/a099b9e8da10b7acd82bb52424b93c27.jpg"/></a>
+								</li>
+								<li class="fl">
+									<a href="javascript:;"><img src="../images/3d4593feb9acd71cf9a32bf7fdfced17.jpg"/></a>
+									<a href="javascript:;"><img src="../images/bb8ff4f782068ae3b64b4780587dd979.jpg"/></a>
+									<a href="javascript:;"><img src="../images/d220789a6bf69028caf2321775a19856.jpg"/></a>
+									<a href="javascript:;"><img src="../images/82e7927f3e6db312803d892958117986.jpg"/></a>
+								</li>
+							</ul>
+						</div>
+					</div>
+					<!--楼层商品-->
+					<div class="pro product">
+						<div class="proWrap">
+							<div class="proList">
+								<ul class="fl">
+									<li class="fl">
+										<a href="javascript:;">
+											<p>
+												<i class="iconfont icon-icon--"></i>
+												<i class="iconfont icon-xiaohuoche"></i>
+											</p>
+											<div class="img-box">
+												<img src="../images/5a67e6f57ceb8_main_w250_h250.jpg"/>
+											</div>
+											<div class="detail">
+												<h3>设计师品牌新款优雅气质经典显瘦长款青果领羊毛大衣咖色SHUIZHI059  全国包邮</h3>
+												<p class="price">¥1,483.46</p>
+												<p>中国
+													<img src="../images/cn.jpg"/>
+												</p>
+											</div>
+										</a>
+									</li>
+								</ul>
+							</div>
+						</div>
+					</div>
+				</div>
+				<!--一楼美妆个护结束-->
+				
+				
+				<!--二楼食品酒水开始-->
+				<div class="floor">
+					<!--楼层title-->
+					<div class="title">
+						<h2>食品酒水</h2>
+						<p>
+							<a href="javascript:;">洁面</a>
+							<a href="javascript:;">护肤套装</a>
+							<a href="javascript:;">防晒</a>
+							<a href="javascript:;">美白</a>
+							<a href="javascript:;">精油</a>
+							<a href="javascript:;">无硅油</a>
+							<a href="javascript:;">彩妆</a>
+							<a href="javascript:;">沐浴</a>
+							<a class="fr" href="javascript:;">更多 ></a>
+						</p>
+					</div>
+					<!--楼层轮播图-->
+					<div class="lunbo">
+						<div class="fl l-aside">
+							<img src="../images/cate_92.jpg"/>
+							<ul>
+								<li class="fl"><a href="javascript:;">香水彩妆</a></li>
+								<li class="fl"><a href="javascript:;">面部护理</a></li>
+								<li class="fl"><a href="javascript:;">口腔护理</a></li>
+								<li class="fl"><a href="javascript:;">女性护理</a></li>
+								<li class="fl"><a href="javascript:;">身体护理</a></li>
+								<li class="fl"><a href="javascript:;">洗发护发</a></li>
+								<li class="fl"><a href="javascript:;">清洁用品</a></li>
+							</ul>
+						</div>
+						<div class="fl c-lunbo">
+							<ul id="img-list" class="louti2">
+								<li class="fl"><img src="../images/sBanner01.jpg"></li>
+								<li class="fl"><img src="../images/sBanner02.jpg"></li>
+								<li class="fl"><img src="../images/sBanner03.jpg"></li>
+								<li class="fl"><img src="../images/sBanner04.jpg"></li>
+								<li class="fl"><img src="../images/sBanner05.jpg"></li>
+								<li class="fl"><img src="../images/sBanner01.jpg"></li>
+							</ul>
+							<ul id="numberList">
+								<li class="activeLi"></li>
+								<li></li>
+								<li></li>
+								<li></li>
+								<li></li>
+							</ul>
+							<div id="l-r">
+								<div id="toL"> < </div>
+								<div id="toR"> > </div>
+							</div>
+						</div>
+						<div class="fr r-lunbo">
+							<ul class="toLR2">
+								<li class="fl">
+									<a href="javascript:;"><img src="../images/9aad1c7ada0f850cae5dc73d072df553.jpg"/></a>
+									<a href="javascript:;"><img src="../images/94292b55041fde978197bb2017bbeb33.jpg"/></a>
+									<a href="javascript:;"><img src="../images/0fe41dc0266cc9c5fad7cd7c02a08e98.jpg"/></a>
+									<a href="javascript:;"><img src="../images/a099b9e8da10b7acd82bb52424b93c27.jpg"/></a>
+								</li>
+								<li class="fl">
+									<a href="javascript:;"><img src="../images/3d4593feb9acd71cf9a32bf7fdfced17.jpg"/></a>
+									<a href="javascript:;"><img src="../images/bb8ff4f782068ae3b64b4780587dd979.jpg"/></a>
+									<a href="javascript:;"><img src="../images/d220789a6bf69028caf2321775a19856.jpg"/></a>
+									<a href="javascript:;"><img src="../images/82e7927f3e6db312803d892958117986.jpg"/></a>
+								</li>
+							</ul>
+						</div>
+					</div>
+					<!--楼层商品-->
+					<div class="pro product">
+						<div class="proWrap">
+							
+							<div class="proList">
+								<ul class="fl">
+									<li class="fl">
+										<a href="javascript:;">
+											<p>
+												<i class="iconfont icon-icon--"></i>
+												<i class="iconfont icon-xiaohuoche"></i>
+											</p>
+											<div class="img-box">
+												<img src="../images/5a67e6f57ceb8_main_w250_h250.jpg"/>
+											</div>
+											<div class="detail">
+												<h3>设计师品牌新款优雅气质经典显瘦长款青果领羊毛大衣咖色SHUIZHI059  全国包邮</h3>
+												<p class="price">¥1,483.46</p>
+												<p>中国
+													<img src="../images/cn.jpg"/>
+												</p>
+											</div>
+										</a>
+									</li>
+								</ul>
+							</div>
+						</div>
+					</div>
+				</div>
+				<!--二楼食品酒水结束-->
+				
+				
+				<!--三楼家居日用开始-->
+				<div class="floor">
+					<!--楼层title-->
+					<div class="title">
+						<h2>家居日用</h2>
+						<p>
+							<a href="javascript:;">洁面</a>
+							<a href="javascript:;">护肤套装</a>
+							<a href="javascript:;">防晒</a>
+							<a href="javascript:;">美白</a>
+							<a href="javascript:;">精油</a>
+							<a href="javascript:;">无硅油</a>
+							<a href="javascript:;">彩妆</a>
+							<a href="javascript:;">沐浴</a>
+							<a class="fr" href="javascript:;">更多 ></a>
+						</p>
+					</div>
+					<!--楼层轮播图-->
+					<div class="lunbo">
+						<div class="fl l-aside">
+							<img src="../images/cate_122.jpg"/>
+							<ul>
+								<li class="fl"><a href="javascript:;">香水彩妆</a></li>
+								<li class="fl"><a href="javascript:;">面部护理</a></li>
+								<li class="fl"><a href="javascript:;">口腔护理</a></li>
+								<li class="fl"><a href="javascript:;">女性护理</a></li>
+								<li class="fl"><a href="javascript:;">身体护理</a></li>
+								<li class="fl"><a href="javascript:;">洗发护发</a></li>
+								<li class="fl"><a href="javascript:;">清洁用品</a></li>
+							</ul>
+						</div>
+						<div class="fl c-lunbo">
+							<ul id="img-list" class="louti3">
+								<li class="fl"><img src="../images/sBanner21.jpg"></li>
+								<li class="fl"><img src="../images/sBanner22.jpg"></li>
+								<li class="fl"><img src="../images/sBanner23.jpg"></li>
+								<li class="fl"><img src="../images/sBanner24.jpg"></li>
+								<li class="fl"><img src="../images/sBanner25.jpg"></li>
+								<li class="fl"><img src="../images/sBanner21.jpg"></li>
+							</ul>
+							<ul id="numberList">
+								<li class="activeLi"></li>
+								<li></li>
+								<li></li>
+								<li></li>
+								<li></li>
+							</ul>
+							<div id="l-r">
+								<div id="toL"> < </div>
+								<div id="toR"> > </div>
+							</div>
+						</div>
+						<div class="fr r-lunbo">
+							<ul class="toLR3">
+								<li class="fl">
+									<a href="javascript:;"><img src="../images/9aad1c7ada0f850cae5dc73d072df553.jpg"/></a>
+									<a href="javascript:;"><img src="../images/94292b55041fde978197bb2017bbeb33.jpg"/></a>
+									<a href="javascript:;"><img src="../images/0fe41dc0266cc9c5fad7cd7c02a08e98.jpg"/></a>
+									<a href="javascript:;"><img src="../images/a099b9e8da10b7acd82bb52424b93c27.jpg"/></a>
+								</li>
+								<li class="fl">
+									<a href="javascript:;"><img src="../images/3d4593feb9acd71cf9a32bf7fdfced17.jpg"/></a>
+									<a href="javascript:;"><img src="../images/bb8ff4f782068ae3b64b4780587dd979.jpg"/></a>
+									<a href="javascript:;"><img src="../images/d220789a6bf69028caf2321775a19856.jpg"/></a>
+									<a href="javascript:;"><img src="../images/82e7927f3e6db312803d892958117986.jpg"/></a>
+								</li>
+							</ul>
+						</div>
+					</div>
+					<!--楼层商品-->
+					<div class="pro product">
+						<div class="proWrap">
+							
+							<div class="proList">
+								<ul class="fl">
+									<li class="fl">
+										<a href="javascript:;">
+											<p>
+												<i class="iconfont icon-icon--"></i>
+												<i class="iconfont icon-xiaohuoche"></i>
+											</p>
+											<div class="img-box">
+												<img src="../images/5a67e6f57ceb8_main_w250_h250.jpg"/>
+											</div>
+											<div class="detail">
+												<h3>设计师品牌新款优雅气质经典显瘦长款青果领羊毛大衣咖色SHUIZHI059  全国包邮</h3>
+												<p class="price">¥1,483.46</p>
+												<p>中国
+													<img src="../images/cn.jpg"/>
+												</p>
+											</div>
+										</a>
+									</li>
+								</ul>
+							</div>
+						</div>
+					</div>
+				</div>
+				<!--三楼家居日用结束-->
+				
+				
+				<!--四楼服饰鞋帽开始-->
+				<div class="floor">
+					<!--楼层title-->
+					<div class="title">
+						<h2>服饰鞋帽</h2>
+						<p>
+							<a href="javascript:;">洁面</a>
+							<a href="javascript:;">护肤套装</a>
+							<a href="javascript:;">防晒</a>
+							<a href="javascript:;">美白</a>
+							<a href="javascript:;">精油</a>
+							<a href="javascript:;">无硅油</a>
+							<a href="javascript:;">彩妆</a>
+							<a href="javascript:;">沐浴</a>
+							<a class="fr" href="javascript:;">更多 ></a>
+						</p>
+					</div>
+					<!--楼层轮播图-->
+					<div class="lunbo">
+						<div class="fl l-aside">
+							<img src="../images/cate_1187.jpg"/>
+							<ul>
+								<li class="fl"><a href="javascript:;">香水彩妆</a></li>
+								<li class="fl"><a href="javascript:;">面部护理</a></li>
+								<li class="fl"><a href="javascript:;">口腔护理</a></li>
+								<li class="fl"><a href="javascript:;">女性护理</a></li>
+								<li class="fl"><a href="javascript:;">身体护理</a></li>
+								<li class="fl"><a href="javascript:;">洗发护发</a></li>
+								<li class="fl"><a href="javascript:;">清洁用品</a></li>
+							</ul>
+						</div>
+						<div class="fl c-lunbo">
+							<ul id="img-list" class="louti4">
+								<li class="fl"><img src="../images/sBanner31.jpg"></li>
+								<li class="fl"><img src="../images/sBanner32.jpg"></li>
+								<li class="fl"><img src="../images/sBanner33.jpg"></li>
+								<li class="fl"><img src="../images/sBanner34.jpg"></li>
+								<li class="fl"><img src="../images/sBanner35.jpg"></li>
+								<li class="fl"><img src="../images/sBanner31.jpg"></li>
+							</ul>
+							<ul id="numberList">
+								<li class="activeLi"></li>
+								<li></li>
+								<li></li>
+								<li></li>
+								<li></li>
+							</ul>
+							<div id="l-r">
+								<div id="toL"> < </div>
+								<div id="toR"> > </div>
+							</div>
+						</div>
+						<div class="fr r-lunbo">
+							<ul class="toLR4">
+								<li class="fl">
+									<a href="javascript:;"><img src="../images/9aad1c7ada0f850cae5dc73d072df553.jpg"/></a>
+									<a href="javascript:;"><img src="../images/94292b55041fde978197bb2017bbeb33.jpg"/></a>
+									<a href="javascript:;"><img src="../images/0fe41dc0266cc9c5fad7cd7c02a08e98.jpg"/></a>
+									<a href="javascript:;"><img src="../images/a099b9e8da10b7acd82bb52424b93c27.jpg"/></a>
+								</li>
+								<li class="fl">
+									<a href="javascript:;"><img src="../images/3d4593feb9acd71cf9a32bf7fdfced17.jpg"/></a>
+									<a href="javascript:;"><img src="../images/bb8ff4f782068ae3b64b4780587dd979.jpg"/></a>
+									<a href="javascript:;"><img src="../images/d220789a6bf69028caf2321775a19856.jpg"/></a>
+									<a href="javascript:;"><img src="../images/82e7927f3e6db312803d892958117986.jpg"/></a>
+								</li>
+							</ul>
+						</div>
+					</div>
+					<!--楼层商品-->
+					<div class="pro product">
+						<div class="proWrap">
+							
+							<div class="proList">
+								<ul class="fl">
+									<li class="fl">
+										<a href="javascript:;">
+											<p>
+												<i class="iconfont icon-icon--"></i>
+												<i class="iconfont icon-xiaohuoche"></i>
+											</p>
+											<div class="img-box">
+												<img src="../images/5a67e6f57ceb8_main_w250_h250.jpg"/>
+											</div>
+											<div class="detail">
+												<h3>设计师品牌新款优雅气质经典显瘦长款青果领羊毛大衣咖色SHUIZHI059  全国包邮</h3>
+												<p class="price">¥1,483.46</p>
+												<p>中国
+													<img src="../images/cn.jpg"/>
+												</p>
+											</div>
+										</a>
+									</li>
+								</ul>
+							</div>
+						</div>
+					</div>
+				</div>
+				<!--四楼服饰鞋帽结束-->
+				
+				
+				<!--五楼营养保健开始-->
+				<div class="floor">
+					<!--楼层title-->
+					<div class="title">
+						<h2>营养保健</h2>
+						<p>
+							<a href="javascript:;">洁面</a>
+							<a href="javascript:;">护肤套装</a>
+							<a href="javascript:;">防晒</a>
+							<a href="javascript:;">美白</a>
+							<a href="javascript:;">精油</a>
+							<a href="javascript:;">无硅油</a>
+							<a href="javascript:;">彩妆</a>
+							<a href="javascript:;">沐浴</a>
+							<a class="fr" href="javascript:;">更多 ></a>
+						</p>
+					</div>
+					<!--楼层轮播图-->
+					<div class="lunbo">
+						<div class="fl l-aside">
+							<img src="../images/cate_80.jpg"/>
+							<ul>
+								<li class="fl"><a href="javascript:;">香水彩妆</a></li>
+								<li class="fl"><a href="javascript:;">面部护理</a></li>
+								<li class="fl"><a href="javascript:;">口腔护理</a></li>
+								<li class="fl"><a href="javascript:;">女性护理</a></li>
+								<li class="fl"><a href="javascript:;">身体护理</a></li>
+								<li class="fl"><a href="javascript:;">洗发护发</a></li>
+								<li class="fl"><a href="javascript:;">清洁用品</a></li>
+							</ul>
+						</div>
+						<div class="fl c-lunbo">
+							<ul id="img-list" class="louti5">
+								<li class="fl"><img src="../images/sBanner41.jpg"></li>
+								<li class="fl"><img src="../images/sBanner42.jpg"></li>
+								<li class="fl"><img src="../images/sBanner43.jpg"></li>
+								<li class="fl"><img src="../images/sBanner44.jpg"></li>
+								<li class="fl"><img src="../images/sBanner45.jpg"></li>
+								<li class="fl"><img src="../images/sBanner41.jpg"></li>
+							</ul>
+							<ul id="numberList">
+								<li class="activeLi"></li>
+								<li></li>
+								<li></li>
+								<li></li>
+								<li></li>
+							</ul>
+							<div id="l-r">
+								<div id="toL"> < </div>
+								<div id="toR"> > </div>
+							</div>
+						</div>
+						<div class="fr r-lunbo">
+							<ul class="toLR5">
+								<li class="fl">
+									<a href="javascript:;"><img src="../images/9aad1c7ada0f850cae5dc73d072df553.jpg"/></a>
+									<a href="javascript:;"><img src="../images/94292b55041fde978197bb2017bbeb33.jpg"/></a>
+									<a href="javascript:;"><img src="../images/0fe41dc0266cc9c5fad7cd7c02a08e98.jpg"/></a>
+									<a href="javascript:;"><img src="../images/a099b9e8da10b7acd82bb52424b93c27.jpg"/></a>
+								</li>
+								<li class="fl">
+									<a href="javascript:;"><img src="../images/3d4593feb9acd71cf9a32bf7fdfced17.jpg"/></a>
+									<a href="javascript:;"><img src="../images/bb8ff4f782068ae3b64b4780587dd979.jpg"/></a>
+									<a href="javascript:;"><img src="../images/d220789a6bf69028caf2321775a19856.jpg"/></a>
+									<a href="javascript:;"><img src="../images/82e7927f3e6db312803d892958117986.jpg"/></a>
+								</li>
+							</ul>
+						</div>
+					</div>
+					<!--楼层商品-->
+					<div class="pro product">
+						<div class="proWrap">
+							<div class="proList">
+								<ul class="fl">
+									<li class="fl">
+										<a href="javascript:;">
+											<p>
+												<i class="iconfont icon-icon--"></i>
+												<i class="iconfont icon-xiaohuoche"></i>
+											</p>
+											<div class="img-box">
+												<img src="../images/5a67e6f57ceb8_main_w250_h250.jpg"/>
+											</div>
+											<div class="detail">
+												<h3>设计师品牌新款优雅气质经典显瘦长款青果领羊毛大衣咖色SHUIZHI059  全国包邮</h3>
+												<p class="price">¥1,483.46</p>
+												<p>中国
+													<img src="../images/cn.jpg"/>
+												</p>
+											</div>
+										</a>
+									</li>
+								</ul>
+							</div>
+						</div>
+					</div>
+				</div>
+				<!--五楼营养保健结束-->
+				
+				
+				<!--六楼钟表首饰开始-->
+				<div class="floor">
+					<!--楼层title-->
+					<div class="title">
+						<h2>钟表首饰</h2>
+						<p>
+							<a href="javascript:;">洁面</a>
+							<a href="javascript:;">护肤套装</a>
+							<a href="javascript:;">防晒</a>
+							<a href="javascript:;">美白</a>
+							<a href="javascript:;">精油</a>
+							<a href="javascript:;">无硅油</a>
+							<a href="javascript:;">彩妆</a>
+							<a href="javascript:;">沐浴</a>
+							<a class="fr" href="javascript:;">更多 ></a>
+						</p>
+					</div>
+					<!--楼层轮播图-->
+					<div class="lunbo">
+						<div class="fl l-aside">
+							<img src="../images/cate_80.jpg"/>
+							<ul>
+								<li class="fl"><a href="javascript:;">香水彩妆</a></li>
+								<li class="fl"><a href="javascript:;">面部护理</a></li>
+								<li class="fl"><a href="javascript:;">口腔护理</a></li>
+								<li class="fl"><a href="javascript:;">女性护理</a></li>
+								<li class="fl"><a href="javascript:;">身体护理</a></li>
+								<li class="fl"><a href="javascript:;">洗发护发</a></li>
+								<li class="fl"><a href="javascript:;">清洁用品</a></li>
+							</ul>
+						</div>
+						<div class="fl c-lunbo">
+							<ul id="img-list" class="louti6">
+								<li class="fl"><img src="../images/sBanner51.jpg"></li>
+								<li class="fl"><img src="../images/sBanner52.jpg"></li>
+								<li class="fl"><img src="../images/sBanner53.jpg"></li>
+								<li class="fl"><img src="../images/sBanner54.jpg"></li>
+								<li class="fl"><img src="../images/sBanner55.jpg"></li>
+								<li class="fl"><img src="../images/sBanner51.jpg"></li>
+							</ul>
+							<ul id="numberList">
+								<li class="activeLi"></li>
+								<li></li>
+								<li></li>
+								<li></li>
+								<li></li>
+							</ul>
+							<div id="l-r">
+								<div id="toL"> < </div>
+								<div id="toR"> > </div>
+							</div>
+						</div>
+						<div class="fr r-lunbo">
+							<ul class="toLR6">
+								<li class="fl">
+									<a href="javascript:;"><img src="../images/9aad1c7ada0f850cae5dc73d072df553.jpg"/></a>
+									<a href="javascript:;"><img src="../images/94292b55041fde978197bb2017bbeb33.jpg"/></a>
+									<a href="javascript:;"><img src="../images/0fe41dc0266cc9c5fad7cd7c02a08e98.jpg"/></a>
+									<a href="javascript:;"><img src="../images/a099b9e8da10b7acd82bb52424b93c27.jpg"/></a>
+								</li>
+								<li class="fl">
+									<a href="javascript:;"><img src="../images/3d4593feb9acd71cf9a32bf7fdfced17.jpg"/></a>
+									<a href="javascript:;"><img src="../images/bb8ff4f782068ae3b64b4780587dd979.jpg"/></a>
+									<a href="javascript:;"><img src="../images/d220789a6bf69028caf2321775a19856.jpg"/></a>
+									<a href="javascript:;"><img src="../images/82e7927f3e6db312803d892958117986.jpg"/></a>
+								</li>
+							</ul>
+						</div>
+					</div>
+					<!--楼层商品-->
+					<div class="pro product">
+						<div class="proWrap">
+							<div class="proList">
+								<ul class="fl">
+									<li class="fl">
+										<a href="javascript:;">
+											<p>
+												<i class="iconfont icon-icon--"></i>
+												<i class="iconfont icon-xiaohuoche"></i>
+											</p>
+											<div class="img-box">
+												<img src="../images/5a67e6f57ceb8_main_w250_h250.jpg"/>
+											</div>
+											<div class="detail">
+												<h3>设计师品牌新款优雅气质经典显瘦长款青果领羊毛大衣咖色SHUIZHI059  全国包邮</h3>
+												<p class="price">¥1,483.46</p>
+												<p>中国
+													<img src="../images/cn.jpg"/>
+												</p>
+											</div>
+										</a>
+									</li>
+								</ul>
+							</div>
+						</div>
+					</div>
+				</div>
+				<!--六楼钟表首饰结束-->
+				
+				
+				<!--七楼母婴用品开始-->
+				<div class="floor">
+					<!--楼层title-->
+					<div class="title">
+						<h2>母婴用品</h2>
+						<p>
+							<a href="javascript:;">洁面</a>
+							<a href="javascript:;">护肤套装</a>
+							<a href="javascript:;">防晒</a>
+							<a href="javascript:;">美白</a>
+							<a href="javascript:;">精油</a>
+							<a href="javascript:;">无硅油</a>
+							<a href="javascript:;">彩妆</a>
+							<a href="javascript:;">沐浴</a>
+							<a class="fr" href="javascript:;">更多 ></a>
+						</p>
+					</div>
+					<!--楼层轮播图-->
+					<div class="lunbo">
+						<div class="fl l-aside">
+							<img src="../images/cate_20.jpg"/>
+							<ul>
+								<li class="fl"><a href="javascript:;">香水彩妆</a></li>
+								<li class="fl"><a href="javascript:;">面部护理</a></li>
+								<li class="fl"><a href="javascript:;">口腔护理</a></li>
+								<li class="fl"><a href="javascript:;">女性护理</a></li>
+								<li class="fl"><a href="javascript:;">身体护理</a></li>
+								<li class="fl"><a href="javascript:;">洗发护发</a></li>
+								<li class="fl"><a href="javascript:;">清洁用品</a></li>
+							</ul>
+						</div>
+						<div class="fl c-lunbo">
+							<ul id="img-list" class="louti7">
+								<li class="fl"><img src="../images/sBanner61.jpg"></li>
+								<li class="fl"><img src="../images/sBanner62.jpg"></li>
+								<li class="fl"><img src="../images/sBanner63.jpg"></li>
+								<li class="fl"><img src="../images/sBanner64.jpg"></li>
+								<li class="fl"><img src="../images/sBanner65.jpg"></li>
+								<li class="fl"><img src="../images/sBanner61.jpg"></li>
+							</ul>
+							<ul id="numberList">
+								<li class="activeLi"></li>
+								<li></li>
+								<li></li>
+								<li></li>
+								<li></li>
+							</ul>
+							<div id="l-r">
+								<div id="toL"> < </div>
+								<div id="toR"> > </div>
+							</div>
+						</div>
+						<div class="fr r-lunbo">
+							<ul class="toLR7">
+								<li class="fl">
+									<a href="javascript:;"><img src="../images/9aad1c7ada0f850cae5dc73d072df553.jpg"/></a>
+									<a href="javascript:;"><img src="../images/94292b55041fde978197bb2017bbeb33.jpg"/></a>
+									<a href="javascript:;"><img src="../images/0fe41dc0266cc9c5fad7cd7c02a08e98.jpg"/></a>
+									<a href="javascript:;"><img src="../images/a099b9e8da10b7acd82bb52424b93c27.jpg"/></a>
+								</li>
+								<li class="fl">
+									<a href="javascript:;"><img src="../images/3d4593feb9acd71cf9a32bf7fdfced17.jpg"/></a>
+									<a href="javascript:;"><img src="../images/bb8ff4f782068ae3b64b4780587dd979.jpg"/></a>
+									<a href="javascript:;"><img src="../images/d220789a6bf69028caf2321775a19856.jpg"/></a>
+									<a href="javascript:;"><img src="../images/82e7927f3e6db312803d892958117986.jpg"/></a>
+								</li>
+							</ul>
+						</div>
+					</div>
+					<!--楼层商品-->
+					<div class="pro product">
+						<div class="proWrap">
+							<div class="proList">
+								<ul class="fl">
+									<li class="fl">
+										<a href="javascript:;">
+											<p>
+												<i class="iconfont icon-icon--"></i>
+												<i class="iconfont icon-xiaohuoche"></i>
+											</p>
+											<div class="img-box">
+												<img src="../images/5a67e6f57ceb8_main_w250_h250.jpg"/>
+											</div>
+											<div class="detail">
+												<h3>设计师品牌新款优雅气质经典显瘦长款青果领羊毛大衣咖色SHUIZHI059  全国包邮</h3>
+												<p class="price">¥1,483.46</p>
+												<p>中国
+													<img src="../images/cn.jpg"/>
+												</p>
+											</div>
+										</a>
+									</li>
+								</ul>
+							</div>
+						</div>
+					</div>
+				</div>
+				<!--七楼母婴用品结束-->
+				
+				
+				<!--八楼礼品箱包开始-->
+				<div class="floor">
+					<!--楼层title-->
+					<div class="title">
+						<h2>礼品箱包</h2>
+						<p>
+							<a href="javascript:;">洁面</a>
+							<a href="javascript:;">护肤套装</a>
+							<a href="javascript:;">防晒</a>
+							<a href="javascript:;">美白</a>
+							<a href="javascript:;">精油</a>
+							<a href="javascript:;">无硅油</a>
+							<a href="javascript:;">彩妆</a>
+							<a href="javascript:;">沐浴</a>
+							<a class="fr" href="javascript:;">更多 ></a>
+						</p>
+					</div>
+					<!--楼层轮播图-->
+					<div class="lunbo">
+						<div class="fl l-aside">
+							<img src="../images/cate_1036.jpg"/>
+							<ul>
+								<li class="fl"><a href="javascript:;">香水彩妆</a></li>
+								<li class="fl"><a href="javascript:;">面部护理</a></li>
+								<li class="fl"><a href="javascript:;">口腔护理</a></li>
+								<li class="fl"><a href="javascript:;">女性护理</a></li>
+								<li class="fl"><a href="javascript:;">身体护理</a></li>
+								<li class="fl"><a href="javascript:;">洗发护发</a></li>
+								<li class="fl"><a href="javascript:;">清洁用品</a></li>
+							</ul>
+						</div>
+						<div class="fl c-lunbo">
+							<ul id="img-list" class="louti8">
+								<li class="fl"><img src="../images/sBanner71.jpg"></li>
+								<li class="fl"><img src="../images/sBanner72.jpg"></li>
+								<li class="fl"><img src="../images/sBanner73.jpg"></li>
+								<li class="fl"><img src="../images/sBanner74.jpg"></li>
+								<li class="fl"><img src="../images/sBanner75.jpg"></li>
+								<li class="fl"><img src="../images/sBanner71.jpg"></li>
+							</ul>
+							<ul id="numberList">
+								<li class="activeLi"></li>
+								<li></li>
+								<li></li>
+								<li></li>
+								<li></li>
+							</ul>
+							<div id="l-r">
+								<div id="toL"> < </div>
+								<div id="toR"> > </div>
+							</div>
+						</div>
+						<div class="fr r-lunbo">
+							<ul class="toLR8">
+								<li class="fl">
+									<a href="javascript:;"><img src="../images/9aad1c7ada0f850cae5dc73d072df553.jpg"/></a>
+									<a href="javascript:;"><img src="../images/94292b55041fde978197bb2017bbeb33.jpg"/></a>
+									<a href="javascript:;"><img src="../images/0fe41dc0266cc9c5fad7cd7c02a08e98.jpg"/></a>
+									<a href="javascript:;"><img src="../images/a099b9e8da10b7acd82bb52424b93c27.jpg"/></a>
+								</li>
+								<li class="fl">
+									<a href="javascript:;"><img src="../images/3d4593feb9acd71cf9a32bf7fdfced17.jpg"/></a>
+									<a href="javascript:;"><img src="../images/bb8ff4f782068ae3b64b4780587dd979.jpg"/></a>
+									<a href="javascript:;"><img src="../images/d220789a6bf69028caf2321775a19856.jpg"/></a>
+									<a href="javascript:;"><img src="../images/82e7927f3e6db312803d892958117986.jpg"/></a>
+								</li>
+							</ul>
+						</div>
+					</div>
+					<!--楼层商品-->
+					<div class="pro product">
+						<div class="proWrap">
+							<div class="proList">
+								<ul class="fl">
+									<li class="fl">
+										<a href="javascript:;">
+											<p>
+												<i class="iconfont icon-icon--"></i>
+												<i class="iconfont icon-xiaohuoche"></i>
+											</p>
+											<div class="img-box">
+												<img src="../images/5a67e6f57ceb8_main_w250_h250.jpg"/>
+											</div>
+											<div class="detail">
+												<h3>设计师品牌新款优雅气质经典显瘦长款青果领羊毛大衣咖色SHUIZHI059  全国包邮</h3>
+												<p class="price">¥1,483.46</p>
+												<p>中国
+													<img src="../images/cn.jpg"/>
+												</p>
+											</div>
+										</a>
+									</li>
+								</ul>
+							</div>
+						</div>
+					</div>
+				</div>
+				<!--八楼礼品箱包结束-->
+				
+				
+				<!--九楼数码电子开始-->
+				<div class="floor">
+					<!--楼层title-->
+					<div class="title">
+						<h2>数码电子</h2>
+						<p>
+							<a href="javascript:;">洁面</a>
+							<a href="javascript:;">护肤套装</a>
+							<a href="javascript:;">防晒</a>
+							<a href="javascript:;">美白</a>
+							<a href="javascript:;">精油</a>
+							<a href="javascript:;">无硅油</a>
+							<a href="javascript:;">彩妆</a>
+							<a href="javascript:;">沐浴</a>
+							<a class="fr" href="javascript:;">更多 ></a>
+						</p>
+					</div>
+					<!--楼层轮播图-->
+					<div class="lunbo">
+						<div class="fl l-aside">
+							<img src="../images/cate_497.jpg"/>
+							<ul>
+								<li class="fl"><a href="javascript:;">香水彩妆</a></li>
+								<li class="fl"><a href="javascript:;">面部护理</a></li>
+								<li class="fl"><a href="javascript:;">口腔护理</a></li>
+								<li class="fl"><a href="javascript:;">女性护理</a></li>
+								<li class="fl"><a href="javascript:;">身体护理</a></li>
+								<li class="fl"><a href="javascript:;">洗发护发</a></li>
+								<li class="fl"><a href="javascript:;">清洁用品</a></li>
+							</ul>
+						</div>
+						<div class="fl c-lunbo">
+							<ul id="img-list" class="louti9">
+								<li class="fl"><img src="../images/sBanner81.jpg"></li>
+								<li class="fl"><img src="../images/sBanner82.jpg"></li>
+								<li class="fl"><img src="../images/sBanner83.jpg"></li>
+								<li class="fl"><img src="../images/sBanner84.jpg"></li>
+								<li class="fl"><img src="../images/sBanner85.jpg"></li>
+								<li class="fl"><img src="../images/sBanner81.jpg"></li>
+							</ul>
+							<ul id="numberList">
+								<li class="activeLi"></li>
+								<li></li>
+								<li></li>
+								<li></li>
+								<li></li>
+							</ul>
+							<div id="l-r">
+								<div id="toL"> < </div>
+								<div id="toR"> > </div>
+							</div>
+						</div>
+						<div class="fr r-lunbo">
+							<ul class="toLR9">
+								<li class="fl">
+									<a href="javascript:;"><img src="../images/9aad1c7ada0f850cae5dc73d072df553.jpg"/></a>
+									<a href="javascript:;"><img src="../images/94292b55041fde978197bb2017bbeb33.jpg"/></a>
+									<a href="javascript:;"><img src="../images/0fe41dc0266cc9c5fad7cd7c02a08e98.jpg"/></a>
+									<a href="javascript:;"><img src="../images/a099b9e8da10b7acd82bb52424b93c27.jpg"/></a>
+								</li>
+								<li class="fl">
+									<a href="javascript:;"><img src="../images/3d4593feb9acd71cf9a32bf7fdfced17.jpg"/></a>
+									<a href="javascript:;"><img src="../images/bb8ff4f782068ae3b64b4780587dd979.jpg"/></a>
+									<a href="javascript:;"><img src="../images/d220789a6bf69028caf2321775a19856.jpg"/></a>
+									<a href="javascript:;"><img src="../images/82e7927f3e6db312803d892958117986.jpg"/></a>
+								</li>
+							</ul>
+						</div>
+					</div>
+					<!--楼层商品-->
+					<div class="pro product">
+						<div class="proWrap">
+							<div class="proList">
+								<ul class="fl">
+									<li class="fl">
+										<a href="javascript:;">
+											<p>
+												<i class="iconfont icon-icon--"></i>
+												<i class="iconfont icon-xiaohuoche"></i>
+											</p>
+											<div class="img-box">
+												<img src="../images/5a67e6f57ceb8_main_w250_h250.jpg"/>
+											</div>
+											<div class="detail">
+												<h3>设计师品牌新款优雅气质经典显瘦长款青果领羊毛大衣咖色SHUIZHI059  全国包邮</h3>
+												<p class="price">¥1,483.46</p>
+												<p>中国
+													<img src="../images/cn.jpg"/>
+												</p>
+											</div>
+										</a>
+									</li>
+								</ul>
+							</div>
+						</div>
+					</div>
+				</div>
+				<!--九楼数码电子结束-->
+				
+				
+				<!--十楼汽车用品开始-->
+				<div class="floor">
+					<!--楼层title-->
+					<div class="title">
+						<h2>汽车用品</h2>
+						<p>
+							<a href="javascript:;">洁面</a>
+							<a href="javascript:;">护肤套装</a>
+							<a href="javascript:;">防晒</a>
+							<a href="javascript:;">美白</a>
+							<a href="javascript:;">精油</a>
+							<a href="javascript:;">无硅油</a>
+							<a href="javascript:;">彩妆</a>
+							<a href="javascript:;">沐浴</a>
+							<a class="fr" href="javascript:;">更多 ></a>
+						</p>
+					</div>
+					<!--楼层轮播图-->
+					<div class="lunbo">
+						<div class="fl l-aside">
+							<img src="../images/cate_1066.jpg"/>
+							<ul>
+								<li class="fl"><a href="javascript:;">香水彩妆</a></li>
+								<li class="fl"><a href="javascript:;">面部护理</a></li>
+								<li class="fl"><a href="javascript:;">口腔护理</a></li>
+								<li class="fl"><a href="javascript:;">女性护理</a></li>
+								<li class="fl"><a href="javascript:;">身体护理</a></li>
+								<li class="fl"><a href="javascript:;">洗发护发</a></li>
+								<li class="fl"><a href="javascript:;">清洁用品</a></li>
+							</ul>
+						</div>
+						<div class="fl c-lunbo">
+							<ul id="img-list" class="louti10">
+								<li class="fl"><img src="../images/sBanner91.jpg"></li>
+								<li class="fl"><img src="../images/sBanner92.jpg"></li>
+								<li class="fl"><img src="../images/sBanner93.jpg"></li>
+								<li class="fl"><img src="../images/sBanner94.jpg"></li>
+								<li class="fl"><img src="../images/sBanner95.jpg"></li>
+								<li class="fl"><img src="../images/sBanner91.jpg"></li>
+							</ul>
+							<ul id="numberList">
+								<li class="activeLi"></li>
+								<li></li>
+								<li></li>
+								<li></li>
+								<li></li>
+							</ul>
+							<div id="l-r">
+								<div id="toL"> < </div>
+								<div id="toR"> > </div>
+							</div>
+						</div>
+						<div class="fr r-lunbo">
+							<ul class="toLR10">
+								<li class="fl">
+									<a href="javascript:;"><img src="../images/9aad1c7ada0f850cae5dc73d072df553.jpg"/></a>
+									<a href="javascript:;"><img src="../images/94292b55041fde978197bb2017bbeb33.jpg"/></a>
+									<a href="javascript:;"><img src="../images/0fe41dc0266cc9c5fad7cd7c02a08e98.jpg"/></a>
+									<a href="javascript:;"><img src="../images/a099b9e8da10b7acd82bb52424b93c27.jpg"/></a>
+								</li>
+								<li class="fl">
+									<a href="javascript:;"><img src="../images/3d4593feb9acd71cf9a32bf7fdfced17.jpg"/></a>
+									<a href="javascript:;"><img src="../images/bb8ff4f782068ae3b64b4780587dd979.jpg"/></a>
+									<a href="javascript:;"><img src="../images/d220789a6bf69028caf2321775a19856.jpg"/></a>
+									<a href="javascript:;"><img src="../images/82e7927f3e6db312803d892958117986.jpg"/></a>
+								</li>
+							</ul>
+						</div>
+					</div>
+					<!--楼层商品-->
+					<div class="pro product">
+						<div class="proWrap">
+							<div class="proList">
+								<ul class="fl">
+									<li class="fl">
+										<a href="javascript:;">
+											<p>
+												<i class="iconfont icon-icon--"></i>
+												<i class="iconfont icon-xiaohuoche"></i>
+											</p>
+											<div class="img-box">
+												<img src="../images/5a67e6f57ceb8_main_w250_h250.jpg"/>
+											</div>
+											<div class="detail">
+												<h3>设计师品牌新款优雅气质经典显瘦长款青果领羊毛大衣咖色SHUIZHI059  全国包邮</h3>
+												<p class="price">¥1,483.46</p>
+												<p>中国
+													<img src="../images/cn.jpg"/>
+												</p>
+											</div>
+										</a>
+									</li>
+								</ul>
+							</div>
+						</div>
+					</div>
+				</div>
+				<!--十楼汽车用品结束-->
+				
+				<!--首页楼层结束-->
 			</div>
 		</div>
 		<!--页面主体结束-->
+		
+		<!--楼层侧栏导航开始-->
+		<div id="floatNav">
+			<p>
+				<i class="iconfont icon-kouhong1"></i>
+				<span>美妆个护</span>
+			</p>
+			<p>
+				<i class="iconfont icon-jiushuihongjiuhongjiubei"></i>
+				<span>食品酒水</span>
+			</p>
+			<p>
+				<i class="iconfont icon-chabei"></i>
+				<span>家居日用</span>
+			</p>
+			<p>
+				<i class="iconfont icon-shangyi"></i>
+				<span>服饰鞋帽</span>
+			</p>
+			<p>
+				<i class="iconfont icon-yiyaobaojian"></i>
+				<span>营养保健</span>
+			</p>
+			<p>
+				<i class="iconfont icon-zuanshi"></i>
+				<span>钟表首饰</span>
+			</p>
+			<p>
+				<i class="iconfont icon-naiping2"></i>
+				<span>母婴用品</span>
+			</p>
+			<p>
+				<i class="iconfont icon-baobao"></i>
+				<span>礼品箱包</span>
+			</p>
+			<p>
+				<i class="iconfont icon-zhaoxiangji"></i>
+				<span>数码电子</span>
+			</p>
+			<p>
+				<i class="iconfont icon-qiche"></i>
+				<span>汽车用品</span>
+			</p>
+			<em>
+				<i id="toTop" class="iconfont icon-top1"></i>
+			</em>
+		</div>
+		
+		<!--楼层侧栏导航结束-->
 		
 		<!--底部开始-->
 		<div id="footWrap"></div>
 		<!--底部结束-->
 	</body>
 </html>
-<script type="text/javascript">
-	//加载头部信息
-	$("#headWrap").load("header.html");
-	//加载底部信息
-	$("#footWrap").load("footer.html");
-</script>
+

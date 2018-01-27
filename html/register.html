@@ -4,7 +4,13 @@
 		<meta charset="UTF-8">
 		<title>TPS商城-正品低价、品质保证、享受优惠，轻松购物!</title>
 		<link rel="stylesheet" type="text/css" href="../css/reset.css"/>
+		<link rel="stylesheet" type="text/css" href="../css/public.css"/>
+		<link rel="stylesheet" type="text/css" href="../css/header.css"/>
+		<link rel="stylesheet" type="text/css" href="../css/footer.css"/>
+		<link rel="stylesheet" type="text/css" href="../font_fkny25wzsjfhto6r/iconfont.css"/>
 		<script src="../js/jquery-1.11.1.min.js" type="text/javascript" charset="utf-8"></script>
+		<script src="../js/header.js" type="text/javascript" charset="utf-8"></script>
+		<script src="../js/cookie.js" type="text/javascript" charset="utf-8"></script>
 	</head>
 	<style type="text/css">
 		#main{
@@ -51,10 +57,13 @@
 		}
 		#main .register .reg{
 			width: 314px;
-			height: 252px;
 		}
 		#main .register .reg li{
 			position: relative;
+			margin-bottom: 8px;
+		}
+		#main .register .reg li>p{
+			padding: 4px 0 4px 16px;
 		}
 		#main .register .reg li.protocol{
 			margin-bottom: 8px;
@@ -77,7 +86,6 @@
 		    border-radius: 6px;
 		    color: #999;
 		    font-size: 14px;
-		    margin-bottom: 10px;
 		}
 		#main .register .reg li>input#check{
 	        margin: 0 5px 2px 0;
@@ -98,7 +106,7 @@
 		    line-height: 45px;
 		    cursor: pointer;
 		}
-		#main .register p{
+		#main .register .p{
 			padding: 4px 0 4px 10px;
 			margin-top: 10px;
 		}
@@ -107,6 +115,21 @@
 		}
 		#main .register .reg a:hover{
 			text-decoration: underline;
+		}
+		#main .register .reg li>span{
+		    position: absolute;
+    		top: 8px;
+    		right: -18px;
+		    width: 19px;
+    		height: 19px;
+    		margin: 5px;
+    		vertical-align: middle;
+		}
+		#main .register .reg .right{
+			background: url(../images/register.png) no-repeat -33px 0 scroll transparent;
+		}
+		#main .register .reg .error{
+			background: url(../images/register.png) no-repeat -14px 0 scroll transparent;
 		}
 	</style>
 	<body>
@@ -119,27 +142,30 @@
 						<li class="active"><a href="javascript:;">邮箱注册</a></li>
 						<li><a href="javascript:;">手机号码注册</a></li>
 					</ul>
-					<form action="post">
+					<form action="login.html" method="post">
 						<ul class="reg">
 							<li>
 								<input id="email" type="text" placeholder="电子邮箱" />
 								<span></span>
+								<p></p>
 							</li>
 							<li>
-								<input id="pwd" type="text" placeholder="请输入密码" />
+								<input id="pwd" type="password" placeholder="请输入密码" />
 								<span></span>
+								<p></p>
 							</li>
 							<li>
-								<input id="rpwd" type="text" placeholder="请再次输入密码" />
+								<input id="rpwd" type="password" placeholder="请再次输入密码" />
 								<span></span>
+								<p></p>
 							</li>
 							<li class="protocol">
 								<input type="checkbox" id="check" checked/>
 								我同意
 								<a href="javascript:;">《TPS用户注册协议》</a>
 							</li>
-							<input class="btn" type="button" value="同意协议并注册"/>
-							<p>
+							<input class="btn" type="submit" value="同意协议并注册"/>
+							<p class="p">
 								已有账号?
 								<a href="login.html">去登录</a>
 							</p>
@@ -157,4 +183,92 @@
 	$("#headWrap").load("header.html");
 	//加载底部信息
 	$("#footWrap").load("footer.html");
+	
+	/*注册信息 表单验证*/
+	/*验证email*/
+	var flagEmail = null;
+	$( "#email" ).blur( function(){
+		var reg = /^\w+@(\w+)(\.\w+)+$/;
+		var arr = [];
+		arr = getCookie( "user" );
+		for( var i = 0; i < arr.length; i++ ){
+			if( $( "#email" ).val() == arr[ i ].email ){
+				$( "#email" ).css( "border-color", "#ee4242" );
+				$( "#email" ).next().addClass( "error" ).removeClass( "right" );
+				$( "#email" ).parent().find( "p" ).html( "该邮箱已被注册,换一个吧" ).css( "color", "#ee4242" );
+				return;
+			}
+		}
+		if( reg.test($( this ).val()) ){
+			flagEmail = true;
+			$( this ).css( "border-color", "#e5e5e5" );
+			$( this ).next().addClass( "right" ).removeClass( "error" );
+			$( this ).parent().find( "p" ).html( "邮箱格式正确" ).css( "color", "#6ac451" );
+		}else{
+			flagEmail = false;
+			$( this ).css( "border-color", "#ee4242" );
+			$( this ).next().addClass( "error" ).removeClass( "right" );
+			$( this ).parent().find( "p" ).html( "邮箱格式错误" ).css( "color", "#ee4242" );
+		}
+	} )
+	/*验证密码*/
+	var flagPwd = null;
+	$( "#pwd" ).blur( function(){
+		var reg = /^.{6,}$/;
+		if( reg.test($( this ).val()) ){
+			flagPwd = true;
+			$( this ).css( "border-color", "#e5e5e5" );
+			$( this ).next().addClass( "right" ).removeClass( "error" );
+			$( this ).parent().find( "p" ).html( "密码符合" ).css( "color", "#6ac451" );
+		}else{
+			flagPwd = false;
+			$( this ).css( "border-color", "#ee4242" );
+			$( this ).next().addClass( "error" ).removeClass( "right" );
+			$( this ).parent().find( "p" ).html( "密码至少由6位字符组成" ).css( "color", "#ee4242" );
+		}
+	} )
+	/*确认密码*/
+	var flagRpwd = null;
+	$( "#rpwd" ).blur( function(){
+		if( $( this ).val() == $( "#pwd" ).val() && $( this ).val().length > 5 ){
+			flagRpwd = true;
+			$( this ).css( "border-color", "#e5e5e5" );
+			$( this ).next().addClass( "right" ).removeClass( "error" );
+			$( this ).parent().find( "p" ).html( "密码正确" ).css( "color", "#6ac451" );
+		}else{
+			flagRpwd = false;
+			$( this ).css( "border-color", "#ee4242" );
+			$( this ).next().addClass( "error" ).removeClass( "right" );
+			$( this ).parent().find( "p" ).html( "两次密码输入不一致" ).css( "color", "#ee4242" );
+		}
+	} )
+	/*同意协议*/
+	var flagPro = true;//默认选中
+	$( "#check" ).click( function(){
+		if( !$( this ).prop( "checked" ) ){
+			flagPro = false;
+		}else{
+			flagPro = true;
+		}
+	} )
+	/*点击注册提交form表单*/
+	$( "form" ).submit( function(){
+		var arr = [];
+		arr = getCookie( "user" );
+		if( flagEmail && flagPwd && flagRpwd && flagPro ){
+			/*将用户信息存入cookie*/
+			var user = {
+				"email" : $( "#email" ).val(),
+				"pwd" : $( "#pwd" ).val()
+			}
+			arr.push( user );
+			setCookie( "user", JSON.stringify(arr) );
+			alert( "用户注册成功! 去登录吧。" );
+			return true;
+		}else{
+			alert( "用户注册失败! 请重新填写信息。" );
+			return false;
+		}
+	} )
+	
 </script>
