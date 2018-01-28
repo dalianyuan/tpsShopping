@@ -401,24 +401,38 @@
 		function addShopCar(){
 			var str = location.href;
 			var pId = str.split( "?" )[1].split( "=" )[1];
-			console.log( pId );
 			$.ajax({
 				type:"get",
-				url:"../json/newData.json",
+				url:"../json/newData.json?id=Math.random()",
 				success : function( res ){
 					var arr = [];
+					var flag = true;
 					for( var i = 0; i < res.length; i++ ){
 						if( pId == res[ i ].id ){
 							var json = {
-								"name" : res[ i ].name,
+								"id" : res[ i ].id,
 								"src" : res[ i ].src,
 								"info" : res[ i ].info,
 								"price" : res[ i ].price,
 								"country" : res[ i ].country,
 								"count" : 1
 							}
-							arr.push( json );
+							break;
 						}
+					}
+					/*第一次点击加入购物车之前 先点击了一次商品 所以就已经存了一条cookie数据*/
+					arr = getCookie( "proList" );
+					if( arr.length > 0 ){
+						for( var j = 0; j < arr.length; j++ ){
+							if( json.id == arr[ j ].id ){
+								arr[ j ].count++;
+								flag = false;
+								break;
+							}
+						}
+					}
+					if( flag ){
+						arr.push( json );
 					}
 					setCookie( "proList" , JSON.stringify( arr ) );
 				}

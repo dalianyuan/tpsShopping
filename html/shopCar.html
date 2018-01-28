@@ -12,9 +12,9 @@
 		<link rel="stylesheet" type="text/css" href="../font_fkny25wzsjfhto6r/iconfont.css"/>
 		<script src="../js/jquery-1.11.1.min.js" type="text/javascript" charset="utf-8"></script>
 		<script src="../js/public.js" type="text/javascript" charset="utf-8"></script>
+		<script src="../js/cookie.js" type="text/javascript" charset="utf-8"></script>
 		<script src="../js/shopCar.js" type="text/javascript" charset="utf-8"></script>
 		<script src="../js/header.js" type="text/javascript" charset="utf-8"></script>
-		<script src="../js/cookie.js" type="text/javascript" charset="utf-8"></script>
 	</head>
 	<body>
 		<!--头部开始-->
@@ -25,16 +25,16 @@
 		<div id="main">
 			<div class="w1200">
 				<p class="title">全部商品
-					<span id="num">
+					<!--<span id="num">
 						1
-					</span>
+					</span>-->
 				</p>
 				<div id="box">
 					<dl class="clearfix">
 						<!--表首行标题-->
 						<dt>
 							<span class="col-1 fl">
-								<input type="checkbox" id="" class="fl mtr14-4" checked />
+								<!--<input type="checkbox" class="fl mtr14-4 selectAll" />-->
 								全选
 							</span>
 							<span class="col-2 fl">商品图片</span>
@@ -44,57 +44,61 @@
 							<span class="col-2 fl">小计</span>
 							<span class="col-1 fl">操作</span>
 						</dt>
+						
 						<!--商品行-->
-						<dd class="item clearfix">
-							<span class="col-1 fl">
-								<input type="checkbox" id="" class="fl" checked />
-							</span>
-							<span class="col-2 fl">
-								<img class="img" src="../images/pro_thumb01.jpg"/>
-							</span>
-							<span class="col-2 fl saleInCn">
-								<a href="javascript:;">
-									进口美国加州混酿红葡萄酒2支  750ml*2瓶 全国包邮
-								</a>
-								<p>此商品在中国有售</p>
-							</span>
-							<span class="col-2 fl mt-28">
-								<b class="price">¥1,597.33</b>
-							</span>
-							<span class="col-2 fl mt-28">
-								<p class="jiaJian">
-									<a class="fl" href="javascript:;">
-										<i>-</i>
+						<div id="proList">
+							<dd class="item clearfix">
+								<span class="col-1 fl">
+									<input type="checkbox" id="" class="fl" checked />
+								</span>
+								<span class="col-2 fl">
+									<img class="img" src="../images/pro_thumb01.jpg"/>
+								</span>
+								<span class="col-2 fl saleInCn">
+									<a href="javascript:;">
+										进口美国加州混酿红葡萄酒2支  750ml*2瓶 全国包邮
 									</a>
-									<input type="text" id="" class="fl" value="1" />
-									<a class="fl" href="javascript:;">
-										<i>+</i>
+									<p>此商品在中国有售</p>
+								</span>
+								<span class="col-2 fl mt-28">
+									<b class="price">¥1,597.33</b>
+								</span>
+								<span class="col-2 fl mt-28">
+									<p class="jiaJian">
+										<a class="fl" href="javascript:;">
+											<i>-</i>
+										</a>
+										<input type="text" id="" class="fl" value="1" />
+										<a class="fl" href="javascript:;">
+											<i>+</i>
+										</a>
+									</p>
+								</span>
+								<span class="col-2 fl mt-28">
+									<b class="cRed price">¥1,597.33</b>
+								</span>
+								<span class="col-1 fl mt-28">
+									<a href="javascript:;">
+										<img src="../images/del.png"/>
 									</a>
-								</p>
-							</span>
-							<span class="col-2 fl mt-28">
-								<b class="cse price">¥1,597.33</b>
-							</span>
-							<span class="col-1 fl mt-28">
-								<a href="javascript:;">
-									<img src="../images/del.png"/>
-								</a>
-							</span>
-						</dd>
+								</span>
+							</dd>
+						</div>
+						
 						<!--全选行-->
 						<dd class="selAll">
 							<span>
-								<input type="checkbox" class="fl" checked/>
+								<input type="checkbox" class="fl selectAll" />
 								全选
 							</span>
 							<a href="javascript:;">删除选中的商品</a>
 						</dd>
 						<!--结算行-->
 						<dd>
-							<div>
+							<div class="js">
 								<p class="gongJi"> 
-									共<i>0</i>件商品&nbsp;总价(不含运费):
-									<b class="cse price">¥1,597.33</b>
+									共<i class="proCount">0</i>件商品&nbsp;总价(不含运费):
+									<b class="cRed price totalMoney">¥0.00</b>
 								</p>
 								<p class="jieSuan">
 									<a class="fr" href="javascript:;">立即结算</a>
@@ -113,3 +117,143 @@
 		
 	</body>
 </html>
+<script type="text/javascript">
+	
+	/*加载头部和底部html文件*/
+	$( "#headWrap" ).load( "../html/header.html" );
+	$( "#footWrap" ).load( "../html/footer.html" );
+	
+	/*获取cookie 显示购物车列表*/
+	var proArr = getCookie( "proList" );
+	var proStr = "";
+	for( var i = 0; i < proArr.length; i++ ){
+		proStr += `<dd class="item clearfix" data-id=${proArr[i].id}>
+						<span class="col-1 fl">
+							<input type="checkbox" id="" class="fl ck" />
+						</span>
+						<span class="col-2 fl">
+							<img class="img" src="../images/${proArr[i].src}"/>
+						</span>
+						<span class="col-2 fl saleInCn">
+							<a href="javascript:;">
+								${proArr[i].info}
+							</a>
+							<p>此商品在${proArr[i].country}有售</p>
+						</span>
+						<span class="col-2 fl mt-28">
+							<b class="price">¥${proArr[i].price}</b>
+						</span>
+						<span class="col-2 fl mt-28">
+							<p class="jiaJian">
+								<a class="fl updateCount" data-number="-1" href="javascript:;">
+									<i>-</i>
+								</a>
+								<span class="fl shop-count">${proArr[i].count}</span>
+								<a class="fl updateCount" data-number="1" href="javascript:;">
+									<i>+</i>
+								</a>
+							</p>
+						</span>
+						<span class="col-2 fl mt-28">
+							<b class="cRed price sumPrice">¥${(proArr[i].price*proArr[i].count).toFixed(2)}</b>
+						</span>
+						<span class="col-1 fl mt-28">
+							<a class="delBtn" href="javascript:;">
+								<img src="../images/del.png"/>
+							</a>
+						</span>
+					</dd>`;
+	}
+	$( "#proList" ).html( proStr );
+	
+	/*点击删除操作  删除页面的当前行  和  cookie中的该条数据*/
+	$( ".delBtn" ).click( function(){
+		var pId = $( this ).parent().parent().data( "id" );
+		for( var i = 0; i < proArr.length; i++ ){
+			if( pId == proArr[ i ].id ){
+				proArr.splice( i, 1 );
+				break;
+			}
+		}
+		setCookie( "proList", JSON.stringify( proArr ) );
+		$( this ).parent().parent().remove();
+		getTotal();
+		carAll();
+	} )
+	
+	/*点击加减操作*/
+	$( ".updateCount" ).click( function(){
+		var sign = $( this ).data( "number" );
+		var pId = $( this ).parent().parent().parent().data( "id" );
+		if( sign == "-1" && $( this ).parent().find( ".shop-count" ).html() == 1 ){
+			alert( "只剩最后一件了，不能再减啦！" );
+			return;
+		}
+		for( var i = 0; i < proArr.length; i++ ){
+			if( pId == proArr[ i ].id ){
+				proArr[ i ].count += sign;
+				$( this ).parent().find( ".shop-count" ).html( proArr[ i ].count );
+				$( this ).parent().parent().next().find( ".price" ).html( "￥" + (proArr[ i ].count*proArr[ i ].price).toFixed(2) );
+				break;
+			}
+		}
+		setCookie( "proList", JSON.stringify( proArr ) );
+		getTotal();
+		carAll();
+	} )
+	
+	/*合计件数 和 金额   遍历多选框  累加被选中的*/
+	function getTotal(){
+		var proCount = 0;
+		var totalMoney = 0;
+		$( ".ck" ).each( function(){
+			if( $( this ).prop( "checked" ) ){
+				proCount += parseFloat( $( this ).parent().parent().find( ".shop-count" ).html() );
+				totalMoney += parseFloat( $( this ).parent().parent().find( ".sumPrice" ).html().substring(1) );
+			} 
+		} )
+		$( ".proCount" ).html( proCount );
+		$( ".totalMoney" ).html( "￥" + totalMoney.toFixed(2) );
+	}
+	$( ".ck" ).click( function(){
+		getTotal();
+		carAll();
+	} )
+	
+	/*点击全选*/
+	$( ".selectAll" ).click( function(){
+		$( ".ck" ).prop( "checked", $( this ).prop( "checked" ) );
+		getTotal();
+		carAll();
+	} )
+	
+	/*点击删除选中的商品*/
+	$( ".selAll a" ).click( function(){
+		$( ".ck" ).each( function(){
+			if( $( this ).prop( "checked" ) ){
+				var pId = $( this ).parent().parent().data( "id" );
+				for( var i = 0; i < proArr.length; i++ ){
+					if( pId == proArr[ i ].id ){
+						proArr.splice( i, 1 );
+						break;
+					}
+				}
+				setCookie( "proList", JSON.stringify( proArr ) );
+				$( this ).parent().parent().remove();
+				getTotal();
+			}
+		} )
+		carAll();
+	} )
+	
+	
+	function carAll(){
+		var carStr = 0;
+		$( ".shop-count" ).each( function(){
+			carStr += parseInt($( this ).html());
+		} )
+		$( ".shopcar b" ).html( carStr );
+	}
+	
+	
+</script>

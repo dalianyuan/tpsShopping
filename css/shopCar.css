@@ -42,28 +42,33 @@
 #box .mtr14-4{
 	margin: 14px 4px 0 0;
 }
-#box dl>dd{
+#box dl dd{
     padding: 10px 40px;
     color: #333;
     border-bottom: dotted 1px #ccc;
 }
-#box dl>.item{
+#box dl>div#proList .item>span{
 	text-align: center;
-	
 }
-#box dl>.item .img{
+#box dl .cRed{
+	color: #ff2f00;
+}
+#box dl .item .img{
+	width: 100px;
+	height: 100px;
     border: solid 1px #ccc;
 }
-#box dl>.item .saleInCn{
+#box dl .item .saleInCn{
 	margin-top: 14px;
 }
-#box dl>.item .saleInCn>a{
+#box dl .item .saleInCn>a{
+	display: block;
 	line-height: 20px;
 }
-#box dl>.item .saleInCn>a:hover{
+#box dl .item .saleInCn>a:hover{
 	color: #ec5766;
 }
-#box dl>.item .saleInCn>p{
+#box dl .item .saleInCn>p{
 	display: inline-block;
     margin-top: 1.5%;
     padding: 5px 24px;
@@ -78,12 +83,12 @@
 #box dl .mt-28{
 	margin-top: 28px;
 }
-#box dl>.item .jiaJian{
+#box dl .item .jiaJian{
 	width: 100px;
     height: 25px;
 	margin-left: 44px;
 }
-#box dl>.item .jiaJian>a{
+#box dl .item .jiaJian>a{
     display: inline-block;
     width: 25px;
     height: 25px;
@@ -92,7 +97,7 @@
     background-color: #f7f7f7;
     cursor: pointer;
 }
-#box dl>.item .jiaJian>input{
+#box dl .item .jiaJian>span{
     width: 36px;
     height: 17px;
     padding: 4px 5px;
@@ -121,7 +126,7 @@
 	padding: 10px 20px;
 	text-align: right;
 }
-#box dl>dd>div{
+#box dl dd .js{
     position: relative;
     padding: 30px 20px;
     min-height: 80px;
