@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>TPS商城-正品低价、品质保证、享受优惠，轻松购物!</title>
+		<link rel="shortcut icon" href="https://www.tps138.com/favicon.ico?v=6.6">
+		<link rel="stylesheet" type="text/css" href="../css/reset.css"/>
+		<link rel="stylesheet" type="text/css" href="../css/public.css"/>
+		<link rel="stylesheet" type="text/css" href="../css/header.css"/>
+		<link rel="stylesheet" type="text/css" href="../css/footer.css"/>
+		<link rel="stylesheet" type="text/css" href="../css/proList.css"/>
+		<link rel="stylesheet" type="text/css" href="../font_pmmze34thplj714i/iconfont.css"/>
+		<link rel="stylesheet" type="text/css" href="../font_fkny25wzsjfhto6r/iconfont.css"/>
+		<script src="../js/jquery-1.11.1.min.js" type="text/javascript" charset="utf-8"></script>
+		<script src="../js/header.js" type="text/javascript" charset="utf-8"></script>
+	</head>
+	<body>
+		
+		<!--头部开始-->
+		<div id="headWrap"></div>
+		<!--头部结束-->
+		
+		<!--主体开始-->
+		<div id="main">
+			<div class="w1200">
+				<p class="title">
+					<a href="index.html">首页</a> >
+					<a href="javascript:;">食品酒水</a> >
+					<a href="javascript:;">休闲食品</a> >
+					<a href="javascript:;">休闲零食</a>
+				</p>
+				<div class="res">
+					<p class="zshu">
+						共计<b>1327</b>个结果
+					</p>
+					<dl>
+						<dt class="fl">价格:</dt>
+						<dd class="fl">
+							<a class="on" href="javascript:;">不限</a>
+							<a href="javascript:;">¥0-99</a>
+							<a href="javascript:;">¥100-199</a>
+							<a href="javascript:;">¥200-299</a>
+							<a href="javascript:;">¥300-699</a>
+							<a href="javascript:;">¥600-9999</a>
+						</dd>
+					</dl>
+					<dl>
+						<dt class="fl">排序:</dt>
+						<dd class="fl">
+							<a class="on" href="javascript:;">综合排序</a>
+							<a href="javascript:;">销量&nbsp;↓</a>
+							<a href="javascript:;">价格&nbsp;↓</a>
+							<a href="javascript:;">评论数&nbsp;↓</a>
+						</dd>
+					</dl>
+				</div>
+				<ul class="list clearfix">
+					<li class="fl">
+						<b class="top"></b>
+						<b class="right"></b>
+						<b class="bottom"></b>
+						<b class="left"></b>
+						<a href="javascript:;">
+							<i class="iconfont icon-xiaohuoche"></i>
+							<img src="../images/599d0596b5942_main.jpg"/>
+						</a>
+						<dl>
+							<dd class="fl">
+								<p>
+									<a href="javascrip:;">心特软 500g*2袋 沙琪玛 全国包邮</a>
+								</p>
+								<p class="price">¥35.14</p>
+							</dd>
+							<dt class="fr">
+								<s>
+									<img src="../images/cn.jpg"/>
+								</s>
+								<p class="country">中国</p>
+							</dt>
+						</dl>
+					</li>
+				</ul>
+				<div class="page">
+					<ul>
+						<li class="cur">1</li>
+						<li>2</li>
+						<li>3</li>
+						<li>></li>
+						<li>尾页</li>
+					</ul>
+				</div>
+			</div>
+		</div>
+		<!--主体结束-->
+		
+		<!--底部开始-->
+		<div id="footWrap"></div>
+		<!--底部结束-->
+		
+	</body>
+</html>
+<script type="text/javascript">
+	
+	/*加载头部和底部信息*/
+	$( "#headWrap" ).load( "header.html" );
+	$( "#footWrap" ).load( "footer.html" );
+	
+	$.ajax({
+		type : "get",
+		url : "../json/proList.json?id=Math.random()",
+		success : function( res ){
+			var proStr = "";
+			for( var i = 0; i < res.length; i++ ){
+				proStr += `<li class="fl">
+								<b class="top"></b>
+								<b class="right"></b>
+								<b class="bottom"></b>
+								<b class="left"></b>
+								<a href="javascript:;">
+									<i class="iconfont icon-xiaohuoche"></i>
+									<img src="../images/${res[i].src}"/>
+								</a>
+								<dl>
+									<dd class="fl">
+										<p>
+											<a href="javascrip:;">${res[i].info}</a>
+										</p>
+										<p class="price">¥${res[i].price}</p>
+									</dd>
+									<dt class="fr">
+										<s>
+											<img src="../images/${res[i].icon}"/>
+										</s>
+										<p class="country">${res[i].country}</p>
+									</dt>
+								</dl>
+							</li>`;
+			}
+			$( ".list" ).html( proStr );
+		}
+	});
+	
+</script>
