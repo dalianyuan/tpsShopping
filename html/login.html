@@ -188,8 +188,14 @@
 		}
 	}
 	
+	/*每次输入的时候将错误提示信息清空*/
+	$( ".login li>input" ).keydown( function(){
+		$( ".msg" ).html( "" );
+	} )
+	
 	/*点击登录 取出cookie 验证用户和密码是否存在   存在就登录成功   不存在就登陆失败 跳到注册页面*/
 	$( ".btn" ).click( function(){
+		var flag = true;//控制刷新验证码  当验证成功就不再刷新
 		var uname = $( "#uname" ).val();
 		var upwd = $( "#upwd" ).val();
 		var str = $( ".check" ).val();
@@ -203,14 +209,17 @@
 			return;
 		}
 		for( var i = 0; i < userArr.length; i++ ){
-			if( uname == userArr[ i ].email && upwd == userArr[ i ].pwd && flagMa ){
+			if( uname == userArr[ i ].user && upwd == userArr[ i ].pwd && flagMa ){
+				flag = false;
 				alert( "用户登录成功! 即将跳转到商城首页。" );
 				location.href = "index.html";
 			}else{
-				showCheckMa();
-				$( ".msg" ).html( "账号或密码不正确" ).css( {
-														"color" : "#ee4242"
-													} )
+				if( flag ){
+					showCheckMa();
+					$( ".msg" ).html( "账号或密码不正确" ).css( {
+															"color" : "#ee4242"
+														} )
+				}
 			}
 		}
 	} )

@@ -106,7 +106,7 @@ window.onload = function(){
 			for( var j = 0; j < 12; j++ ){
 				var randHot = getRand(0,29);
 				hotStr += `<li class="fl">
-								<a href="proDetail.html?id=${arr[randNew].id}">
+								<a href="proDetail.html?id=${arr[randHot].id}">
 									<p class="fl">
 										<i class="iconfont icon-icon-test"></i>
 										<i class="iconfont icon-xiaohuoche"></i>

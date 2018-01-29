@@ -12,6 +12,7 @@
 		<link rel="stylesheet" type="text/css" href="../font_pmmze34thplj714i/iconfont.css"/>
 		<link rel="stylesheet" type="text/css" href="../font_fkny25wzsjfhto6r/iconfont.css"/>
 		<script src="../js/jquery-1.11.1.min.js" type="text/javascript" charset="utf-8"></script>
+		<script src="../js/public.js" type="text/javascript" charset="utf-8"></script>
 		<script src="../js/header.js" type="text/javascript" charset="utf-8"></script>
 	</head>
 	<body>
@@ -82,16 +83,22 @@
 				</ul>
 				<div class="page">
 					<ul>
-						<li class="cur">1</li>
-						<li>2</li>
-						<li>3</li>
-						<li>></li>
-						<li>尾页</li>
+						<li class="first">首页</li>
+						<li class="prev"><</li>
+						<li class="cur num">1</li>
+						<li class="num">2</li>
+						<li class="num">3</li>
+						<li class="next">></li>
+						<li class="last">尾页</li>
 					</ul>
 				</div>
 			</div>
 		</div>
 		<!--主体结束-->
+		
+		<!--回到顶部开始-->
+		<div id="toTop"></div>
+		<!--回到顶部结束-->
 		
 		<!--底部开始-->
 		<div id="footWrap"></div>
@@ -109,35 +116,118 @@
 		type : "get",
 		url : "../json/proList.json?id=Math.random()",
 		success : function( res ){
-			var proStr = "";
-			for( var i = 0; i < res.length; i++ ){
-				proStr += `<li class="fl">
-								<b class="top"></b>
-								<b class="right"></b>
-								<b class="bottom"></b>
-								<b class="left"></b>
-								<a href="javascript:;">
-									<i class="iconfont icon-xiaohuoche"></i>
-									<img src="../images/${res[i].src}"/>
-								</a>
-								<dl>
-									<dd class="fl">
-										<p>
-											<a href="javascrip:;">${res[i].info}</a>
-										</p>
-										<p class="price">¥${res[i].price}</p>
-									</dd>
-									<dt class="fr">
-										<s>
-											<img src="../images/${res[i].icon}"/>
-										</s>
-										<p class="country">${res[i].country}</p>
-									</dt>
-								</dl>
-							</li>`;
+			
+			/*分页*/
+			var page = 1;//显示的页码 默认显示第一页
+			var proNum = 30;//每页显示的商品数量
+			var pageNum = Math.ceil( res.length / proNum );//总页数
+			showPro();//页面一加载就显示第一页商品
+			function showPro(){
+				var proStr = "";
+				for( var i = (page-1)*proNum; i < page*proNum; i++ ){
+					var rand = getRand( 0, res.length - 1 );
+					if( i >= res.length ){
+						break;
+					}
+					proStr += `<li class="fl">
+									<b class="top"></b>
+									<b class="right"></b>
+									<b class="bottom"></b>
+									<b class="left"></b>
+									<a href="javascript:;">
+										<i class="iconfont icon-xiaohuoche"></i>
+										<img src="../images/${res[rand].src}"/>
+									</a>
+									<dl>
+										<dd class="fl">
+											<p>
+												<a href="javascrip:;">${res[rand].info}</a>
+											</p>
+											<p class="price">¥${res[rand].price}</p>
+										</dd>
+										<dt class="fr">
+											<s>
+												<img src="../images/${res[rand].icon}"/>
+											</s>
+											<p class="country">${res[rand].country}</p>
+										</dt>
+									</dl>
+								</li>`;
+				}
+				$( ".list" ).html( proStr );
+				
+				/*显示页码*/
+				var pageStr = "";
+				for( var j = 1; j <= pageNum; j++ ){
+					pageStr += `<li class="num">${j}</li>`;
+				}
+				pageStr = `<li class="first">首页</li>
+							<li class="prev"><</li>
+							${pageStr}
+							<li class="next">></li>
+							<li class="last">尾页</li>`;
+				$( ".page>ul" ).html( pageStr );
+				
+				$( ".page .num" ).eq( page - 1 ).addClass( "cur" ).siblings().removeClass( "cur" );
 			}
-			$( ".list" ).html( proStr );
+			
+			/*点击页码  显示对应页的商品*/
+			$( ".page" ).on( "click", "li.num", function(){
+				page = $( this ).html();
+				showPro();
+			} )
+			
+			
+			/*点击上一页*/
+			$( ".page" ).on( "click", ".prev", function(){
+				if( page == 1 ){
+					page = 1;
+					alert( "已经是第一页啦!" );
+				}else{
+					page--;
+				}
+				showPro();
+			} )
+			
+			/*点击首页*/
+			$( ".page" ).on( "click", ".first", function(){
+				page = 1;
+				showPro();
+			} )
+			
+			
+			/*点击下一页*/
+			$( ".page" ).on( "click", ".next", function(){
+				if( page == pageNum ){
+					page = pageNum;
+					alert( "已经是最后一页啦!" );
+				}else{
+					page++;
+				}
+				showPro();
+			} )
+			
+			/*点击尾页*/
+			$( ".page" ).on( "click", ".last", function(){
+				page = pageNum;
+				showPro();
+			} )
+			
 		}
 	});
+	
+	/*回到顶部开始*/
+	$( document ).scroll( function(){
+		if( $( "html,body" ).scrollTop() > $( window ).innerHeight() ){
+			$( "#toTop" ).fadeIn();
+		}else{
+			$( "#toTop" ).fadeOut();
+		}
+	} )
+	$( "#toTop" ).click( function(){
+		$( "html,body" ).animate( { "scrollTop": 0 } );
+	} )
+	/*回到顶部结束*/
+	
 	
 </script>
