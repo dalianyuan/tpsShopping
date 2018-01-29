@@ -98,7 +98,7 @@
 }
 #main .proWrap .proList{
 	position: relative;
-	width: 6000px;
+	width: 7200px;
     left: 0px;
     overflow: hidden;
     padding: 0px;
@@ -169,7 +169,7 @@
 #main .product .detail{
     position: relative;
     text-align: center;
-    padding: 2px 10px 0;
+    padding: 4px 10px 0;
     margin: 0 auto;
     background: rgba(255,255,255,.8);
 }
@@ -202,23 +202,23 @@
     border: 1px solid #ddd;
 }
 /*左右箭头*/
-#main .product>span{
+#main .proWrap>span{
 	position: absolute;
 	width: 60px;
 	height: 60px;
 	line-height: 60px;
 	font-size: 60px;
 	z-index: 3;
-	top: 50%;
+	top: 44%;
 	margin-top: 10px;
 	text-align: center;
 	cursor: pointer;
-	opacity: 0;
+	display: none;
 }
-#main .product>span.prev{
+#main .proWrap>span.prev{
     left: 0;
 }
-#main .product>span.next{
+#main .proWrap>span.next{
     right: 0;
 }
 /*新品上架结束*/

@@ -72,6 +72,67 @@ window.onload = function(){
 		} )
 		/*banner轮播图结束*/
 		
+		
+		
+		
+		
+		/*新品上架轮播图开始*/
+		newLunbo();
+		function newLunbo(){
+			var index = 0;
+			var newTimer = setInterval( newAuto, 3600 );
+			function newAuto(){
+				index++;
+				if( index == 4 ){
+					index = 1;
+					$( ".newLunbo" ).css( "left", 0 );
+				}
+				startMove( $( ".newLunbo" )[ 0 ], { "left" : -index*1200} );
+			}
+			/*鼠标移入移出 控制箭头显示隐藏 和 定时器*/
+			$( ".newLunbo" ).parent().hover( function(){
+				clearInterval( newTimer );
+				$( this ).find( "span" ).fadeIn();
+			}, function(){
+				newTimer = setInterval( newAuto, 2600 );
+				$( this ).find( "span" ).fadeOut();
+			} )
+			
+			/*点击左箭头*/
+			$( ".proWrap span.prev" ).click( function(){
+				index--;
+				if( index == -1 ){
+					index = 0
+				}
+				startMove( $( ".newLunbo" )[ 0 ], { "left" : -index*1200} );
+			} )
+			/*点击右箭头*/
+			$( ".proWrap span.next" ).click( function(){
+				if( index == 5 ){
+					index = 0;
+					$( ".newLunbo" ).css( "left", 0 );
+				}
+				index++;
+				if( index == 5 ){
+					index = 4;
+				}
+				startMove( $( ".newLunbo" )[ 0 ], { "left" : -index*1200} );
+			} )
+			
+		}
+		
+		/*新品上架轮播图结束*/
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
 		/*ajax获取json数据*/
 		ajaxGet( "../json/newData.json", showPro );
 		function showPro( res ){
