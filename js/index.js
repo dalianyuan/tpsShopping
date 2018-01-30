@@ -72,10 +72,6 @@ window.onload = function(){
 		} )
 		/*banner轮播图结束*/
 		
-		
-		
-		
-		
 		/*新品上架轮播图开始*/
 		newLunbo();
 		function newLunbo(){
@@ -122,15 +118,6 @@ window.onload = function(){
 		}
 		
 		/*新品上架轮播图结束*/
-		
-		
-		
-		
-		
-		
-		
-		
-		
 		
 		
 		/*ajax获取json数据*/
@@ -257,16 +244,19 @@ window.onload = function(){
 				$( selecter ).next().children().eq( index==5 ? 0 : index ).addClass( "activeLi" ).siblings().removeClass( "activeLi" );
 			} )
 		}
-		loutiPlay( ".louti1" );
-		loutiPlay( ".louti2" );
-		loutiPlay( ".louti3" );
-		loutiPlay( ".louti4" );
-		loutiPlay( ".louti5" );
-		loutiPlay( ".louti6" );
-		loutiPlay( ".louti7" );
-		loutiPlay( ".louti8" );
-		loutiPlay( ".louti9" );
-		loutiPlay( ".louti10" );
+		for( var k = 1; k <= 10; k++ ){
+			loutiPlay( ".louti" + k );
+			toLR( ".toLR" + k );
+		}
+//		loutiPlay( ".louti2" );
+//		loutiPlay( ".louti3" );
+//		loutiPlay( ".louti4" );
+//		loutiPlay( ".louti5" );
+//		loutiPlay( ".louti6" );
+//		loutiPlay( ".louti7" );
+//		loutiPlay( ".louti8" );
+//		loutiPlay( ".louti9" );
+//		loutiPlay( ".louti10" );
 		
 		/*首页楼梯中小轮播右边的ul轮播*/
 		function toLR( sel ){
@@ -294,16 +284,15 @@ window.onload = function(){
 				}, 2400 );
 			} )
 		}
-		toLR( ".toLR1" );
-		toLR( ".toLR2" );
-		toLR( ".toLR3" );
-		toLR( ".toLR4" );
-		toLR( ".toLR5" );
-		toLR( ".toLR6" );
-		toLR( ".toLR7" );
-		toLR( ".toLR8" );
-		toLR( ".toLR9" );
-		toLR( ".toLR10" );
+//		toLR( ".toLR2" );
+//		toLR( ".toLR3" );
+//		toLR( ".toLR4" );
+//		toLR( ".toLR5" );
+//		toLR( ".toLR6" );
+//		toLR( ".toLR7" );
+//		toLR( ".toLR8" );
+//		toLR( ".toLR9" );
+//		toLR( ".toLR10" );
 		
 		
 		/*楼梯*/
