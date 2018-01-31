@@ -116,7 +116,6 @@ window.onload = function(){
 			} )
 			
 		}
-		
 		/*新品上架轮播图结束*/
 		
 		
